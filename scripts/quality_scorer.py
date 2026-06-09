@@ -254,9 +254,10 @@ def main() -> None:
         print(f"Average: {avg:.1f}/100")
         print(f"Min: {min(r['total'] for r in results)}/100")
         print(f"Max: {max(r['total'] for r in results)}/100")
-        # Also print the full JSON for scripting
+        # Also print the full JSON for scripting (use ASCII-safe output for Windows)
         print("\n--- Full JSON ---")
-        print(json.dumps({"summary": {"count": len(results), "avg": avg}, "skills": results}, ensure_ascii=False, indent=2))
+        json_str = json.dumps({"summary": {"count": len(results), "avg": round(avg, 1)}, "skills": results}, ensure_ascii=True, indent=2)
+        print(json_str)
     else:
         result = score_skill(target)
         print(json.dumps(result, ensure_ascii=False, indent=2))
