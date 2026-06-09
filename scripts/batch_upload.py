@@ -11,7 +11,7 @@ REGISTRY_PATH = REPO / "sync" / "registry.json"
 
 registry = json.loads(REGISTRY_PATH.read_text("utf-8"))
 hermes = Path.home() / ".hermes" / "skills"
-gs = Path.home() / "Desktop" / "love-dandan" / "global-specs" / "skills"
+gs = Path.home() / "Desktop" / "lihongwei-cn" / "global-specs" / "skills"
 
 # auto-discover all skills with SKILL.md
 skills_to_upload = {}

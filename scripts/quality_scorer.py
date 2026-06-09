@@ -231,12 +231,35 @@ def score_skill(file_path: str | Path) -> dict:
 
 def main() -> None:
     if len(sys.argv) < 2 or sys.argv[1] in ("--help", "-h"):
-        print("Usage: python quality_scorer.py <path/to/SKILL.md>", file=sys.stderr)
-        print("Score a SKILL.md on structure, completeness, docs, freshness.", file=sys.stderr)
+        print("Usage: python quality_scorer.py <path/to/SKILL.md | path/to/skills/dir>", file=sys.stderr)
+        print("Score one or all SKILL.md files on structure, completeness, docs, freshness.", file=sys.stderr)
         sys.exit(1)
 
-    result = score_skill(sys.argv[1])
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    target = Path(sys.argv[1])
+
+    if target.is_dir():
+        # Directory mode: score all <dir>/*/SKILL.md files
+        skill_files = sorted(target.glob("*/SKILL.md"))
+        if not skill_files:
+            print(f"No SKILL.md files found under {target}", file=sys.stderr)
+            sys.exit(1)
+        results = []
+        for sf in skill_files:
+            r = score_skill(sf)
+            results.append(r)
+            print(f"  {r['total']}/100  {sf.parent.name}")
+        avg = sum(r["total"] for r in results) / len(results) if results else 0
+        print(f"\n=== Summary ===")
+        print(f"Skills scored: {len(results)}")
+        print(f"Average: {avg:.1f}/100")
+        print(f"Min: {min(r['total'] for r in results)}/100")
+        print(f"Max: {max(r['total'] for r in results)}/100")
+        # Also print the full JSON for scripting
+        print("\n--- Full JSON ---")
+        print(json.dumps({"summary": {"count": len(results), "avg": avg}, "skills": results}, ensure_ascii=False, indent=2))
+    else:
+        result = score_skill(target)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

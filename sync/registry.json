@@ -1,14 +1,1420 @@
 {
   "skills": {
+    "accessibility-auditor": {
+      "name": "Accessibility Auditor",
+      "version": "unknown",
+      "description": "Expert accessibility specialist who audits interfaces against WCAG standards, tests with assistive t",
+      "author": "unknown",
+      "path": "skills/accessibility-auditor/SKILL.md",
+      "files": 1,
+      "content_hash": "982a14c0d0a9b308"
+    },
+    "ai-engineer": {
+      "name": "AI Engineer",
+      "version": "unknown",
+      "description": "Expert AI/ML engineer specializing in machine learning model development, deployment, and integratio",
+      "author": "unknown",
+      "path": "skills/ai-engineer/SKILL.md",
+      "files": 1,
+      "content_hash": "f25a69aad25acd35"
+    },
+    "airtable": {
+      "name": "airtable",
+      "version": "1.1.0",
+      "description": "Airtable REST API via curl. Records CRUD, filters, upserts.",
+      "author": "community",
+      "path": "skills/airtable/SKILL.md",
+      "files": 1,
+      "content_hash": "537d440df7f23c58"
+    },
+    "api-tester": {
+      "name": "API Tester",
+      "version": "unknown",
+      "description": "Expert API testing specialist focused on comprehensive API validation, performance testing, and qual",
+      "author": "unknown",
+      "path": "skills/api-tester/SKILL.md",
+      "files": 1,
+      "content_hash": "7812267518ff10c8"
+    },
+    "apple-notes": {
+      "name": "apple-notes",
+      "version": "1.0.0",
+      "description": "\"Manage Apple Notes via memo CLI: create, search, edit.\"",
+      "author": "Hermes Agent",
+      "path": "skills/apple-notes/SKILL.md",
+      "files": 1,
+      "content_hash": "c652e01e47938b8a"
+    },
+    "apple-reminders": {
+      "name": "apple-reminders",
+      "version": "1.0.0",
+      "description": "\"Apple Reminders via remindctl: add, list, complete.\"",
+      "author": "Hermes Agent",
+      "path": "skills/apple-reminders/SKILL.md",
+      "files": 1,
+      "content_hash": "7ed9206a4df2739d"
+    },
+    "architecture-diagram": {
+      "name": "architecture-diagram",
+      "version": "1.0.0",
+      "description": "\"Dark-themed SVG architecture/cloud/infra diagrams as HTML.\"",
+      "author": "Cocoon AI (hello@cocoon-ai.com), ported by Hermes Agent",
+      "path": "skills/architecture-diagram/SKILL.md",
+      "files": 1,
+      "content_hash": "0e7e2736aafe052e"
+    },
+    "arxiv": {
+      "name": "arxiv",
+      "version": "1.0.0",
+      "description": "\"Search arXiv papers by keyword, author, category, or ID.\"",
+      "author": "Hermes Agent",
+      "path": "skills/arxiv/SKILL.md",
+      "files": 1,
+      "content_hash": "2a6073a1ad08823d"
+    },
+    "ascii-art": {
+      "name": "ascii-art",
+      "version": "4.0.0",
+      "description": "\"ASCII art: pyfiglet, cowsay, boxes, image-to-ascii.\"",
+      "author": "0xbyt4, Hermes Agent",
+      "path": "skills/ascii-art/SKILL.md",
+      "files": 1,
+      "content_hash": "b69fdd300045a3e6"
+    },
+    "ascii-video": {
+      "name": "ascii-video",
+      "version": "unknown",
+      "description": "\"ASCII video: convert video/audio to colored ASCII MP4/GIF.\"",
+      "author": "unknown",
+      "path": "skills/ascii-video/SKILL.md",
+      "files": 1,
+      "content_hash": "1d4f84e0eacc0d8a"
+    },
+    "audiocraft": {
+      "name": "audiocraft-audio-generation",
+      "version": "1.0.0",
+      "description": "\"AudioCraft: MusicGen text-to-music, AudioGen text-to-sound.\"",
+      "author": "Orchestra Research",
+      "path": "skills/audiocraft/SKILL.md",
+      "files": 1,
+      "content_hash": "eebe52632e3312a5"
+    },
+    "backend-architect": {
+      "name": "Backend Architect",
+      "version": "unknown",
+      "description": "Senior backend architect specializing in scalable system design, database architecture, API developm",
+      "author": "unknown",
+      "path": "skills/backend-architect/SKILL.md",
+      "files": 1,
+      "content_hash": "15f9e1361f63a555"
+    },
+    "baoyu-article-illustrator": {
+      "name": "baoyu-article-illustrator",
+      "version": "1.57.0",
+      "description": "\"Article illustrations: type × style × palette consistency.\"",
+      "author": "宝玉 (JimLiu)",
+      "path": "skills/baoyu-article-illustrator/SKILL.md",
+      "files": 1,
+      "content_hash": "9de0861d5fe4da97"
+    },
+    "baoyu-comic": {
+      "name": "baoyu-comic",
+      "version": "1.56.1",
+      "description": "\"Knowledge comics (知识漫画): educational, biography, tutorial.\"",
+      "author": "宝玉 (JimLiu)",
+      "path": "skills/baoyu-comic/SKILL.md",
+      "files": 1,
+      "content_hash": "39daa86a4c9737a5"
+    },
+    "baoyu-infographic": {
+      "name": "baoyu-infographic",
+      "version": "1.56.1",
+      "description": "\"Infographics: 21 layouts x 21 styles (信息图, 可视化).\"",
+      "author": "宝玉 (JimLiu)",
+      "path": "skills/baoyu-infographic/SKILL.md",
+      "files": 1,
+      "content_hash": "89e25da6d8ea1cac"
+    },
+    "blogwatcher": {
+      "name": "blogwatcher",
+      "version": "2.0.0",
+      "description": "\"Monitor blogs and RSS/Atom feeds via blogwatcher-cli tool.\"",
+      "author": "JulienTant (fork of Hyaxia/blogwatcher)",
+      "path": "skills/blogwatcher/SKILL.md",
+      "files": 1,
+      "content_hash": "b85be5a9b86b9028"
+    },
+    "carsim-simulation": {
+      "name": "carsim-simulation",
+      "version": "unknown",
+      "description": "\"CarSim 联合仿真开发：场景生成、车辆配置、结果分析。触发词：CarSim、carsim、联合仿真、车辆仿真、道路仿真、高架桥仿真、弯道仿真、制动仿真。兼容 CarSim 2019.0+。\"",
+      "author": "unknown",
+      "path": "skills/carsim-simulation/SKILL.md",
+      "files": 1,
+      "content_hash": "232f08d054e7b9dc"
+    },
+    "cc-switch-sync": {
+      "name": "cc-switch-sync",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/cc-switch-sync/SKILL.md",
+      "files": 1,
+      "content_hash": "8072b854b78f6200"
+    },
+    "claude-code": {
+      "name": "claude-code",
+      "version": "2.2.0",
+      "description": "\"Delegate coding to Claude Code CLI (features, PRs).\"",
+      "author": "Hermes Agent + Teknium",
+      "path": "skills/claude-code/SKILL.md",
+      "files": 1,
+      "content_hash": "6b278a073dbe92e9"
+    },
+    "claude-design": {
+      "name": "claude-design",
+      "version": "1.0.0",
+      "description": "Design one-off HTML artifacts (landing, deck, prototype).",
+      "author": "BadTechBandit",
+      "path": "skills/claude-design/SKILL.md",
+      "files": 1,
+      "content_hash": "4c24fb9579a06f16"
+    },
+    "code-reviewer": {
+      "name": "Code Reviewer",
+      "version": "unknown",
+      "description": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintain",
+      "author": "unknown",
+      "path": "skills/code-reviewer/SKILL.md",
+      "files": 1,
+      "content_hash": "7509fcc3ea1dda46"
+    },
+    "code-tidy": {
+      "name": "code-tidy",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/code-tidy/SKILL.md",
+      "files": 1,
+      "content_hash": "6ba72900e37b3f5d"
+    },
+    "codebase-inspection": {
+      "name": "codebase-inspection",
+      "version": "1.0.0",
+      "description": "\"Inspect codebases w/ pygount: LOC, languages, ratios.\"",
+      "author": "Hermes Agent",
+      "path": "skills/codebase-inspection/SKILL.md",
+      "files": 1,
+      "content_hash": "87ddc0578d9bcbc8"
+    },
+    "codex": {
+      "name": "codex",
+      "version": "1.0.0",
+      "description": "\"Delegate coding to OpenAI Codex CLI (features, PRs).\"",
+      "author": "Hermes Agent",
+      "path": "skills/codex/SKILL.md",
+      "files": 1,
+      "content_hash": "55554cc334c04357"
+    },
+    "comfyui": {
+      "name": "comfyui",
+      "version": "5.1.0",
+      "description": "\"Generate images, video, and audio with ComfyUI — install, launch, manage nodes/models, run workflow",
+      "author": "[kshitijk4poor, alt-glitch, purzbeats]",
+      "path": "skills/comfyui/SKILL.md",
+      "files": 1,
+      "content_hash": "fc9514a3b888b352"
+    },
+    "creative-ideation": {
+      "name": "ideation",
+      "version": "1.0.0",
+      "description": "\"Generate project ideas via creative constraints.\"",
+      "author": "SHL0MS",
+      "path": "skills/creative-ideation/SKILL.md",
+      "files": 1,
+      "content_hash": "a0768ddf7685e2a3"
+    },
+    "cross-platform-launcher": {
+      "name": "cross-platform-launcher",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/cross-platform-launcher/SKILL.md",
+      "files": 1,
+      "content_hash": "40ad3abfd85bd1d1"
+    },
+    "cua-driver": {
+      "name": "cua-driver",
+      "version": "unknown",
+      "description": "Drive a native macOS app via the cua-driver CLI (default) or MCP server — snapshot its AX tree, clic",
+      "author": "unknown",
+      "path": "skills/cua-driver/SKILL.md",
+      "files": 1,
+      "content_hash": "5c0e46c628d02e6a"
+    },
+    "data-engineer": {
+      "name": "Data Engineer",
+      "version": "unknown",
+      "description": "Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and ",
+      "author": "unknown",
+      "path": "skills/data-engineer/SKILL.md",
+      "files": 1,
+      "content_hash": "d46e5ebdb81f5f3e"
+    },
+    "database-optimizer": {
+      "name": "Database Optimizer",
+      "version": "unknown",
+      "description": "Expert database specialist focusing on schema design, query optimization, indexing strategies, and p",
+      "author": "unknown",
+      "path": "skills/database-optimizer/SKILL.md",
+      "files": 1,
+      "content_hash": "a58860b44590ed64"
+    },
+    "debugging-hermes-tui-commands": {
+      "name": "debugging-hermes-tui-commands",
+      "version": "1.0.0",
+      "description": "\"Debug Hermes TUI slash commands: Python, gateway, Ink UI.\"",
+      "author": "Hermes Agent",
+      "path": "skills/debugging-hermes-tui-commands/SKILL.md",
+      "files": 1,
+      "content_hash": "55d5811c0b2d872d"
+    },
+    "design-md": {
+      "name": "design-md",
+      "version": "1.0.0",
+      "description": "Author/validate/export Google's DESIGN.md token spec files.",
+      "author": "Hermes Agent",
+      "path": "skills/design-md/SKILL.md",
+      "files": 1,
+      "content_hash": "38ed14bc712a413f"
+    },
+    "devops-automator": {
+      "name": "DevOps Automator",
+      "version": "unknown",
+      "description": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cl",
+      "author": "unknown",
+      "path": "skills/devops-automator/SKILL.md",
+      "files": 1,
+      "content_hash": "5d3c3d12c605a8c0"
+    },
+    "doc-coauthoring": {
+      "name": "doc-coauthoring",
+      "version": "unknown",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to wri",
+      "author": "unknown",
+      "path": "skills/doc-coauthoring/SKILL.md",
+      "files": 1,
+      "content_hash": "2e47d78846faeea4"
+    },
+    "document-generator": {
+      "name": "Document Generator",
+      "version": "unknown",
+      "description": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using",
+      "author": "unknown",
+      "path": "skills/document-generator/SKILL.md",
+      "files": 1,
+      "content_hash": "cd2ca961e0f7baa1"
+    },
+    "dogfood": {
+      "name": "dogfood",
+      "version": "1.0.0",
+      "description": "\"Exploratory QA of web apps: find bugs, evidence, reports.\"",
+      "author": "unknown",
+      "path": "skills/dogfood/SKILL.md",
+      "files": 1,
+      "content_hash": "36b1a710c61727c2"
+    },
+    "dspy": {
+      "name": "dspy",
+      "version": "1.0.0",
+      "description": "\"DSPy: declarative LM programs, auto-optimize prompts, RAG.\"",
+      "author": "Orchestra Research",
+      "path": "skills/dspy/SKILL.md",
+      "files": 1,
+      "content_hash": "67410a6b216d79eb"
+    },
+    "excalidraw": {
+      "name": "excalidraw",
+      "version": "1.0.0",
+      "description": "\"Hand-drawn Excalidraw JSON diagrams (arch, flow, seq).\"",
+      "author": "Hermes Agent",
+      "path": "skills/excalidraw/SKILL.md",
+      "files": 1,
+      "content_hash": "beef7b8ea01e73a3"
+    },
+    "findmy": {
+      "name": "findmy",
+      "version": "1.0.0",
+      "description": "\"Track Apple devices/AirTags via FindMy.app on macOS.\"",
+      "author": "Hermes Agent",
+      "path": "skills/findmy/SKILL.md",
+      "files": 1,
+      "content_hash": "19ec56e3b7f9f0be"
+    },
+    "frontend-developer": {
+      "name": "Frontend Developer",
+      "version": "unknown",
+      "description": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI ",
+      "author": "unknown",
+      "path": "skills/frontend-developer/SKILL.md",
+      "files": 1,
+      "content_hash": "35961da50f408e00"
+    },
+    "gif-search": {
+      "name": "gif-search",
+      "version": "1.1.0",
+      "description": "\"Search/download GIFs from Tenor via curl + jq.\"",
+      "author": "Hermes Agent",
+      "path": "skills/gif-search/SKILL.md",
+      "files": 1,
+      "content_hash": "ee2d14e32314e083"
+    },
+    "git-workflow-master": {
+      "name": "Git Workflow Master",
+      "version": "unknown",
+      "description": "Expert in Git workflows, branching strategies, and version control best practices including conventi",
+      "author": "unknown",
+      "path": "skills/git-workflow-master/SKILL.md",
+      "files": 1,
+      "content_hash": "b2ab151fa5dc3103"
+    },
+    "github-auth": {
+      "name": "github-auth",
+      "version": "1.1.0",
+      "description": "\"GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login.\"",
+      "author": "Hermes Agent",
+      "path": "skills/github-auth/SKILL.md",
+      "files": 1,
+      "content_hash": "980888a5f4d4a184"
+    },
+    "github-code-review": {
+      "name": "github-code-review",
+      "version": "1.1.0",
+      "description": "\"Review PRs: diffs, inline comments via gh or REST.\"",
+      "author": "Hermes Agent",
+      "path": "skills/github-code-review/SKILL.md",
+      "files": 1,
+      "content_hash": "3cd38e249223c801"
+    },
+    "github-issues": {
+      "name": "github-issues",
+      "version": "1.1.0",
+      "description": "\"Create, triage, label, assign GitHub issues via gh or REST.\"",
+      "author": "Hermes Agent",
+      "path": "skills/github-issues/SKILL.md",
+      "files": 1,
+      "content_hash": "31b932cb6c16e64a"
+    },
+    "github-pr-workflow": {
+      "name": "github-pr-workflow",
+      "version": "1.1.0",
+      "description": "\"GitHub PR lifecycle: branch, commit, open, CI, merge.\"",
+      "author": "Hermes Agent",
+      "path": "skills/github-pr-workflow/SKILL.md",
+      "files": 1,
+      "content_hash": "f41117e2498e74d9"
+    },
+    "github-project-page": {
+      "name": "github-project-page",
+      "version": "unknown",
+      "description": "创建或更新 GitHub Pages 项目页面。当用户要求新增项目、创建项目页面、更新主页、添加项目卡片时自动触发。覆盖完整工作流：目录结构、README.md、index.html、主页更新、Git",
+      "author": "unknown",
+      "path": "skills/github-project-page/SKILL.md",
+      "files": 1,
+      "content_hash": "fdf6c3d3606e8877"
+    },
+    "github-repo-management": {
+      "name": "github-repo-management",
+      "version": "1.1.0",
+      "description": "\"Clone/create/fork repos; manage remotes, releases.\"",
+      "author": "Hermes Agent",
+      "path": "skills/github-repo-management/SKILL.md",
+      "files": 1,
+      "content_hash": "355bcef566988194"
+    },
+    "godmode": {
+      "name": "godmode",
+      "version": "1.0.0",
+      "description": "\"Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN.\"",
+      "author": "Hermes Agent + Teknium",
+      "path": "skills/godmode/SKILL.md",
+      "files": 1,
+      "content_hash": "5ab1757d1b638258"
+    },
+    "google-workspace": {
+      "name": "google-workspace",
+      "version": "1.1.0",
+      "description": "\"Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.\"",
+      "author": "Nous Research",
+      "path": "skills/google-workspace/SKILL.md",
+      "files": 1,
+      "content_hash": "014a4818ee1b363d"
+    },
+    "heartmula": {
+      "name": "heartmula",
+      "version": "1.0.0",
+      "description": "\"HeartMuLa: Suno-like song generation from lyrics + tags.\"",
+      "author": "unknown",
+      "path": "skills/heartmula/SKILL.md",
+      "files": 1,
+      "content_hash": "d6f8322ba9ab4756"
+    },
+    "hermes-agent": {
+      "name": "hermes-agent",
+      "version": "2.1.0",
+      "description": "\"Configure, extend, or contribute to Hermes Agent.\"",
+      "author": "Hermes Agent + Teknium",
+      "path": "skills/hermes-agent/SKILL.md",
+      "files": 1,
+      "content_hash": "2e4ce50d64e58e85"
+    },
+    "hermes-agent-collection-deployer": {
+      "name": "hermes-agent-collection-deployer",
+      "version": "1.0.0",
+      "description": ">",
+      "author": "LiHongwei",
+      "path": "skills/hermes-agent-collection-deployer/SKILL.md",
+      "files": 1,
+      "content_hash": "353cd453dc2a7a22"
+    },
+    "hermes-agent-skill-authoring": {
+      "name": "hermes-agent-skill-authoring",
+      "version": "1.0.0",
+      "description": "\"Author in-repo SKILL.md: frontmatter, validator, structure.\"",
+      "author": "Hermes Agent",
+      "path": "skills/hermes-agent-skill-authoring/SKILL.md",
+      "files": 1,
+      "content_hash": "bcb206bb5346ae9d"
+    },
+    "himalaya": {
+      "name": "himalaya",
+      "version": "1.1.0",
+      "description": "\"Himalaya CLI: IMAP/SMTP email from terminal.\"",
+      "author": "community",
+      "path": "skills/himalaya/SKILL.md",
+      "files": 1,
+      "content_hash": "d8830e10696feefd"
+    },
+    "homepage-layout": {
+      "name": "homepage-layout",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/homepage-layout/SKILL.md",
+      "files": 1,
+      "content_hash": "72c92788c0208bad"
+    },
+    "huggingface-hub": {
+      "name": "huggingface-hub",
+      "version": "1.0.0",
+      "description": "\"HuggingFace hf CLI: search/download/upload models, datasets.\"",
+      "author": "Hugging Face",
+      "path": "skills/huggingface-hub/SKILL.md",
+      "files": 1,
+      "content_hash": "10d5bdf26e08ce47"
+    },
+    "humanizer": {
+      "name": "humanizer",
+      "version": "2.5.1",
+      "description": "\"Humanize text: strip AI-isms and add real voice.\"",
+      "author": "Siqi Chen (@blader, https://github.com/blader/humanizer), ported by Hermes Agent",
+      "path": "skills/humanizer/SKILL.md",
+      "files": 1,
+      "content_hash": "4f2eece5122e8296"
+    },
+    "imessage": {
+      "name": "imessage",
+      "version": "1.0.0",
+      "description": "Send and receive iMessages/SMS via the imsg CLI on macOS.",
+      "author": "Hermes Agent",
+      "path": "skills/imessage/SKILL.md",
+      "files": 1,
+      "content_hash": "bc68b1648e301409"
+    },
+    "job-application": {
+      "name": "job-application",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/job-application/SKILL.md",
+      "files": 1,
+      "content_hash": "2421f84eb0adf619"
+    },
+    "jupyter-live-kernel": {
+      "name": "jupyter-live-kernel",
+      "version": "1.0.0",
+      "description": "\"Iterative Python via live Jupyter kernel (hamelnb).\"",
+      "author": "Hermes Agent",
+      "path": "skills/jupyter-live-kernel/SKILL.md",
+      "files": 1,
+      "content_hash": "d93c4b4f50e66c0c"
+    },
+    "kanban-codex-lane": {
+      "name": "kanban-codex-lane",
+      "version": "1.0.0",
+      "description": "Use when a Hermes Kanban worker wants to run Codex CLI as an isolated implementation lane while Herm",
+      "author": "Hermes Agent",
+      "path": "skills/kanban-codex-lane/SKILL.md",
+      "files": 1,
+      "content_hash": "ca946e1f7968f767"
+    },
+    "kanban-orchestrator": {
+      "name": "kanban-orchestrator",
+      "version": "3.0.0",
+      "description": "Decomposition playbook + anti-temptation rules for an orchestrator profile routing work through Kanb",
+      "author": "unknown",
+      "path": "skills/kanban-orchestrator/SKILL.md",
+      "files": 1,
+      "content_hash": "c60c7fcfb64157d7"
+    },
+    "kanban-worker": {
+      "name": "kanban-worker",
+      "version": "2.0.0",
+      "description": "Pitfalls, examples, and edge cases for Hermes Kanban workers. The lifecycle itself is auto-injected ",
+      "author": "unknown",
+      "path": "skills/kanban-worker/SKILL.md",
+      "files": 1,
+      "content_hash": "1a4324dc156cd65b"
+    },
+    "linear": {
+      "name": "linear",
+      "version": "1.0.0",
+      "description": "\"Linear: manage issues, projects, teams via GraphQL + curl.\"",
+      "author": "Hermes Agent",
+      "path": "skills/linear/SKILL.md",
+      "files": 1,
+      "content_hash": "e7b6fbb8b55f8490"
+    },
+    "llama-cpp": {
+      "name": "llama-cpp",
+      "version": "2.1.2",
+      "description": "llama.cpp local GGUF inference + HF Hub model discovery.",
+      "author": "Orchestra Research",
+      "path": "skills/llama-cpp/SKILL.md",
+      "files": 1,
+      "content_hash": "9c1ef45f6197fbc0"
+    },
+    "llm-wiki": {
+      "name": "llm-wiki",
+      "version": "2.1.0",
+      "description": "\"Karpathy's LLM Wiki: build/query interlinked markdown KB.\"",
+      "author": "Hermes Agent",
+      "path": "skills/llm-wiki/SKILL.md",
+      "files": 1,
+      "content_hash": "eb13a2b8c654eeee"
+    },
+    "lm-evaluation-harness": {
+      "name": "evaluating-llms-harness",
+      "version": "1.0.0",
+      "description": "\"lm-eval-harness: benchmark LLMs (MMLU, GSM8K, etc.).\"",
+      "author": "Orchestra Research",
+      "path": "skills/lm-evaluation-harness/SKILL.md",
+      "files": 1,
+      "content_hash": "5426016d51e3b49e"
+    },
+    "macos-computer-use": {
+      "name": "macos-computer-use",
+      "version": "1.0.0",
+      "description": "|",
+      "author": "unknown",
+      "path": "skills/macos-computer-use/SKILL.md",
+      "files": 1,
+      "content_hash": "08b4bb4647d983d1"
+    },
+    "macos-uninstall-app": {
+      "name": "macos-uninstall-app",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/macos-uninstall-app/SKILL.md",
+      "files": 1,
+      "content_hash": "3edb543c8ceec99c"
+    },
+    "manim-video": {
+      "name": "manim-video",
+      "version": "1.0.0",
+      "description": "\"Manim CE animations: 3Blue1Brown math/algo videos.\"",
+      "author": "unknown",
+      "path": "skills/manim-video/SKILL.md",
+      "files": 1,
+      "content_hash": "3459a6af999f0c9b"
+    },
+    "maps": {
+      "name": "maps",
+      "version": "1.2.0",
+      "description": "\"Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.\"",
+      "author": "Mibayy",
+      "path": "skills/maps/SKILL.md",
+      "files": 1,
+      "content_hash": "8c961ecf662838e3"
+    },
+    "matlab-ai-generator": {
+      "name": "matlab-ai-generator",
+      "version": "unknown",
+      "description": "根据用户提供的精确参数生成 MATLAB/Simulink 仿真代码。使用场景：用户要求生成 MATLAB 脚本、Simulink 模型、仿真代码，或要求修改现有仿真参数时自动触发。",
+      "author": "unknown",
+      "path": "skills/matlab-ai-generator/SKILL.md",
+      "files": 1,
+      "content_hash": "cc4537e9e8d7b3c3"
+    },
+    "matlab-debugging": {
+      "name": "matlab-debugging",
+      "version": "unknown",
+      "description": "Diagnose MATLAB errors and unexpected behavior. Breakpoints, workspace inspection, try-catch diagnos",
+      "author": "unknown",
+      "path": "skills/matlab-debugging/SKILL.md",
+      "files": 1,
+      "content_hash": "944c8d1eff245832"
+    },
+    "matlab-design-digital-filter": {
+      "name": "matlab-design-digital-filter",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/matlab-design-digital-filter/SKILL.md",
+      "files": 1,
+      "content_hash": "87e170d39d0d060b"
+    },
+    "matlab-live-script": {
+      "name": "matlab-live-script",
+      "version": "unknown",
+      "description": "Create MATLAB plain text Live Scripts (.m files) following specific formatting rules. Use when gener",
+      "author": "unknown",
+      "path": "skills/matlab-live-script/SKILL.md",
+      "files": 1,
+      "content_hash": "db3f21553c23550a"
+    },
+    "matlab-modernize-code": {
+      "name": "matlab-modernize-code",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/matlab-modernize-code/SKILL.md",
+      "files": 1,
+      "content_hash": "6c4844bc0bb88656"
+    },
+    "matlab-optimize-performance": {
+      "name": "matlab-optimize-performance",
+      "version": "unknown",
+      "description": "\"Read BEFORE optimizing any MATLAB code for speed. Without this workflow, agents commonly optimize t",
+      "author": "unknown",
+      "path": "skills/matlab-optimize-performance/SKILL.md",
+      "files": 1,
+      "content_hash": "ca620b1f485d88dc"
+    },
+    "matlab-performance-optimizer": {
+      "name": "matlab-performance-optimizer",
+      "version": "unknown",
+      "description": "Optimize MATLAB code for better performance through vectorization, memory management, and profiling.",
+      "author": "unknown",
+      "path": "skills/matlab-performance-optimizer/SKILL.md",
+      "files": 1,
+      "content_hash": "fdfb01a54521af5c"
+    },
+    "matlab-review-code": {
+      "name": "matlab-review-code",
+      "version": "unknown",
+      "description": "Review MATLAB code for quality, performance, maintainability, and adherence to MathWorks coding stan",
+      "author": "unknown",
+      "path": "skills/matlab-review-code/SKILL.md",
+      "files": 1,
+      "content_hash": "6c7f54a6d9719a0c"
+    },
+    "matlab-simulink-generator": {
+      "name": "matlab-simulink-generator",
+      "version": "unknown",
+      "description": "自动生成 Simulink 模型（.slx 文件）。使用场景：用户要求生成 Simulink 模型、搭建仿真模型、创建控制系统模型时自动触发。兼容 R2016b。",
+      "author": "unknown",
+      "path": "skills/matlab-simulink-generator/SKILL.md",
+      "files": 1,
+      "content_hash": "82e03b8c6dba7178"
+    },
+    "matlab-test-generator": {
+      "name": "matlab-test-generator",
+      "version": "unknown",
+      "description": "Create comprehensive MATLAB unit tests using the MATLAB Testing Framework. Use when generating test ",
+      "author": "unknown",
+      "path": "skills/matlab-test-generator/SKILL.md",
+      "files": 1,
+      "content_hash": "6f1b73109c042365"
+    },
+    "matlab-testing": {
+      "name": "matlab-testing",
+      "version": "unknown",
+      "description": "Generate and run MATLAB unit tests using matlab.unittest and matlab.uitest. Parameterized tests, fix",
+      "author": "unknown",
+      "path": "skills/matlab-testing/SKILL.md",
+      "files": 1,
+      "content_hash": "85dfe6f02e091cf7"
+    },
+    "matlab-uihtml-app-builder": {
+      "name": "matlab-uihtml-app-builder",
+      "version": "unknown",
+      "description": "Build interactive web applications using HTML/JavaScript interfaces with MATLAB computational backen",
+      "author": "unknown",
+      "path": "skills/matlab-uihtml-app-builder/SKILL.md",
+      "files": 1,
+      "content_hash": "5a586aee322c08e8"
+    },
+    "mcp-builder": {
+      "name": "MCP Builder",
+      "version": "unknown",
+      "description": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI ag",
+      "author": "unknown",
+      "path": "skills/mcp-builder/SKILL.md",
+      "files": 1,
+      "content_hash": "3880031674ae2458"
+    },
+    "minecraft-modpack-server": {
+      "name": "minecraft-modpack-server",
+      "version": "unknown",
+      "description": "\"Host modded Minecraft servers (CurseForge, Modrinth).\"",
+      "author": "unknown",
+      "path": "skills/minecraft-modpack-server/SKILL.md",
+      "files": 1,
+      "content_hash": "858f64c0e67efb29"
+    },
+    "miniprogram-ai-display": {
+      "name": "miniprogram-ai-display",
+      "version": "unknown",
+      "description": "\"Beautifully render AI-generated markdown text in WeChat mini-programs — WXS parser, section cards, ",
+      "author": "unknown",
+      "path": "skills/miniprogram-ai-display/SKILL.md",
+      "files": 1,
+      "content_hash": "1dae04e22cd8a845"
+    },
+    "mobile-app-builder": {
+      "name": "Mobile App Builder",
+      "version": "unknown",
+      "description": "Specialized mobile application developer with expertise in native iOS/Android development and cross-",
+      "author": "unknown",
+      "path": "skills/mobile-app-builder/SKILL.md",
+      "files": 1,
+      "content_hash": "5b6d3d6ba2db8609"
+    },
     "mundo": {
-      "version": "19.2",
-      "score": 98,
-      "author": "love-dandan",
-      "date": "2026-06-03T00:00:00Z",
+      "name": "mundo",
+      "version": "unknown",
+      "description": "",
+      "author": "unknown",
       "path": "skills/mundo/SKILL.md",
-      "content_hash": ""
+      "files": 1,
+      "content_hash": "4bb0eeb59dcb8f6e"
+    },
+    "mundo-agent-builder": {
+      "name": "mundo-agent-builder",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/mundo-agent-builder/SKILL.md",
+      "files": 1,
+      "content_hash": "f1d04150f4eef5aa"
+    },
+    "mundo-agent-development": {
+      "name": "mundo-agent-development",
+      "version": "unknown",
+      "description": "开发、调试、更新 MUNDO Agent 的完整工作流。覆盖 bug 修复、功能开发、流式输出、连接稳定性、三处同步、GitHub Release 发布。",
+      "author": "unknown",
+      "path": "skills/mundo-agent-development/SKILL.md",
+      "files": 1,
+      "content_hash": "954e6a2e6ffa3c50"
+    },
+    "nano-pdf": {
+      "name": "nano-pdf",
+      "version": "1.0.0",
+      "description": "\"Edit PDF text/typos/titles via nano-pdf CLI (NL prompts).\"",
+      "author": "community",
+      "path": "skills/nano-pdf/SKILL.md",
+      "files": 1,
+      "content_hash": "4243b329789c6d7f"
+    },
+    "native-mcp": {
+      "name": "native-mcp",
+      "version": "1.0.0",
+      "description": "\"MCP client: connect servers, register tools (stdio/HTTP).\"",
+      "author": "Hermes Agent",
+      "path": "skills/native-mcp/SKILL.md",
+      "files": 1,
+      "content_hash": "59d2c150022d7906"
+    },
+    "nature-academic-search": {
+      "name": "nature-academic-search",
+      "version": "unknown",
+      "description": ">-",
+      "author": "unknown",
+      "path": "skills/nature-academic-search/SKILL.md",
+      "files": 1,
+      "content_hash": "d15b0e2420fda1d8"
+    },
+    "nature-citation": {
+      "name": "nature-citation",
+      "version": "unknown",
+      "description": ">-",
+      "author": "unknown",
+      "path": "skills/nature-citation/SKILL.md",
+      "files": 1,
+      "content_hash": "26f852df3aa8f4d1"
+    },
+    "nature-data": {
+      "name": "nature-data",
+      "version": "unknown",
+      "description": ">-",
+      "author": "unknown",
+      "path": "skills/nature-data/SKILL.md",
+      "files": 1,
+      "content_hash": "16761a2d6aef2a28"
+    },
+    "nature-figure": {
+      "name": "nature-figure",
+      "version": "unknown",
+      "description": ">-",
+      "author": "unknown",
+      "path": "skills/nature-figure/SKILL.md",
+      "files": 1,
+      "content_hash": "8418c227f56f5fba"
+    },
+    "nature-paper2ppt": {
+      "name": "nature-paper2ppt",
+      "version": "unknown",
+      "description": "Build a complete but efficient Nature-style Chinese PPTX presentation from a scientific paper, prepr",
+      "author": "unknown",
+      "path": "skills/nature-paper2ppt/SKILL.md",
+      "files": 1,
+      "content_hash": "70bb1b9522763a15"
+    },
+    "nature-polishing": {
+      "name": "nature-polishing",
+      "version": "5.0.2",
+      "description": "Polish, restructure, or translate academic prose into Nature-leaning English using writing-strategy ",
+      "author": "Yuan1z skill rebuilt from course notes plus Academic Phrasebank",
+      "path": "skills/nature-polishing/SKILL.md",
+      "files": 1,
+      "content_hash": "946eeed13b86805f"
+    },
+    "nature-reader": {
+      "name": "nature-reader",
+      "version": "unknown",
+      "description": "Build full-paper Chinese-English side-by-side, figure/table-aware, source-grounded Markdown readers ",
+      "author": "unknown",
+      "path": "skills/nature-reader/SKILL.md",
+      "files": 1,
+      "content_hash": "5c36a0af0cc14623"
+    },
+    "nature-response": {
+      "name": "nature-response",
+      "version": "0.1.0",
+      "description": ">-",
+      "author": "unknown",
+      "path": "skills/nature-response/SKILL.md",
+      "files": 1,
+      "content_hash": "9521d5cd6d66b331"
+    },
+    "nature-writing": {
+      "name": "nature-writing",
+      "version": "0.2.0",
+      "description": "Draft, restructure, or plan Nature-style manuscript sections from author-provided claims, results, f",
+      "author": "Community contribution based on curated Nature/Nature Communications writing patterns and open research-writing notes",
+      "path": "skills/nature-writing/SKILL.md",
+      "files": 1,
+      "content_hash": "9cf73605a225fd17"
+    },
+    "neat-freak": {
+      "name": "neat-freak",
+      "version": "unknown",
+      "description": ">",
+      "author": "unknown",
+      "path": "skills/neat-freak/SKILL.md",
+      "files": 1,
+      "content_hash": "dfa7ba124e896ae1"
+    },
+    "node-inspect-debugger": {
+      "name": "node-inspect-debugger",
+      "version": "1.0.0",
+      "description": "\"Debug Node.js via --inspect + Chrome DevTools Protocol CLI.\"",
+      "author": "Hermes Agent",
+      "path": "skills/node-inspect-debugger/SKILL.md",
+      "files": 1,
+      "content_hash": "f2f72c0c9e67143e"
+    },
+    "notion": {
+      "name": "notion",
+      "version": "2.0.0",
+      "description": "\"Notion API + ntn CLI: pages, databases, markdown, Workers.\"",
+      "author": "community",
+      "path": "skills/notion/SKILL.md",
+      "files": 1,
+      "content_hash": "6a97fc137b0bed3e"
+    },
+    "obliteratus": {
+      "name": "obliteratus",
+      "version": "2.0.0",
+      "description": "\"OBLITERATUS: abliterate LLM refusals (diff-in-means).\"",
+      "author": "Hermes Agent",
+      "path": "skills/obliteratus/SKILL.md",
+      "files": 1,
+      "content_hash": "9fb394a0af2a9733"
+    },
+    "obsidian": {
+      "name": "obsidian",
+      "version": "unknown",
+      "description": "Read, search, create, and edit notes in the Obsidian vault.",
+      "author": "unknown",
+      "path": "skills/obsidian/SKILL.md",
+      "files": 1,
+      "content_hash": "d2d080f82893dac8"
+    },
+    "ocr-and-documents": {
+      "name": "ocr-and-documents",
+      "version": "2.3.0",
+      "description": "\"Extract text from PDFs/scans (pymupdf, marker-pdf).\"",
+      "author": "Hermes Agent",
+      "path": "skills/ocr-and-documents/SKILL.md",
+      "files": 1,
+      "content_hash": "720a1f1a534167ef"
+    },
+    "opencode": {
+      "name": "opencode",
+      "version": "1.2.0",
+      "description": "\"Delegate coding to OpenCode CLI (features, PR review).\"",
+      "author": "Hermes Agent",
+      "path": "skills/opencode/SKILL.md",
+      "files": 1,
+      "content_hash": "afb3ea1f1b430070"
+    },
+    "openhue": {
+      "name": "openhue",
+      "version": "1.0.0",
+      "description": "\"Control Philips Hue lights, scenes, rooms via OpenHue CLI.\"",
+      "author": "community",
+      "path": "skills/openhue/SKILL.md",
+      "files": 1,
+      "content_hash": "550f94848d10ab82"
+    },
+    "p5js": {
+      "name": "p5js",
+      "version": "1.0.0",
+      "description": "\"p5.js sketches: gen art, shaders, interactive, 3D.\"",
+      "author": "unknown",
+      "path": "skills/p5js/SKILL.md",
+      "files": 1,
+      "content_hash": "6a9722e2633ecdb3"
+    },
+    "performance-benchmarker": {
+      "name": "Performance Benchmarker",
+      "version": "unknown",
+      "description": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improvin",
+      "author": "unknown",
+      "path": "skills/performance-benchmarker/SKILL.md",
+      "files": 1,
+      "content_hash": "db3cc9a462baa31e"
+    },
+    "pixel-art": {
+      "name": "pixel-art",
+      "version": "2.0.0",
+      "description": "\"Pixel art w/ era palettes (NES, Game Boy, PICO-8).\"",
+      "author": "dodo-reach",
+      "path": "skills/pixel-art/SKILL.md",
+      "files": 1,
+      "content_hash": "01f351726675bb5e"
+    },
+    "pixel-character-design": {
+      "name": "pixel-character-design",
+      "version": "1.0.0",
+      "description": "\"Design pixel art characters from reference images and render them as HTML Canvas grids and terminal",
+      "author": "hermes-agent",
+      "path": "skills/pixel-character-design/SKILL.md",
+      "files": 1,
+      "content_hash": "eab8be3877b2c2df"
+    },
+    "plan": {
+      "name": "plan",
+      "version": "1.0.0",
+      "description": "\"Plan mode: write markdown plan to .hermes/plans/, no exec.\"",
+      "author": "Hermes Agent",
+      "path": "skills/plan/SKILL.md",
+      "files": 1,
+      "content_hash": "9a4de28156f74cc1"
+    },
+    "pokemon-player": {
+      "name": "pokemon-player",
+      "version": "unknown",
+      "description": "\"Play Pokemon via headless emulator + RAM reads.\"",
+      "author": "unknown",
+      "path": "skills/pokemon-player/SKILL.md",
+      "files": 1,
+      "content_hash": "fe8da8e6dc5599ef"
+    },
+    "polymarket": {
+      "name": "polymarket",
+      "version": "1.0.0",
+      "description": "\"Query Polymarket: markets, prices, orderbooks, history.\"",
+      "author": "Hermes Agent + Teknium",
+      "path": "skills/polymarket/SKILL.md",
+      "files": 1,
+      "content_hash": "becfa71e730b482c"
+    },
+    "popular-web-designs": {
+      "name": "popular-web-designs",
+      "version": "1.0.0",
+      "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.",
+      "author": "Hermes Agent + Teknium (design systems sourced from VoltAgent/awesome-design-md)",
+      "path": "skills/popular-web-designs/SKILL.md",
+      "files": 1,
+      "content_hash": "cd89bdb86008bb30"
+    },
+    "powerpoint": {
+      "name": "powerpoint",
+      "version": "unknown",
+      "description": "\"Create, read, edit .pptx decks, slides, notes, templates.\"",
+      "author": "unknown",
+      "path": "skills/powerpoint/SKILL.md",
+      "files": 1,
+      "content_hash": "bb2084f5da312eec"
+    },
+    "pretext": {
+      "name": "pretext",
+      "version": "1.0.0",
+      "description": "\"Use when building creative browser demos with @chenglou/pretext — DOM-free text layout for ASCII ar",
+      "author": "Hermes Agent",
+      "path": "skills/pretext/SKILL.md",
+      "files": 1,
+      "content_hash": "532570c95d1a0bf6"
+    },
+    "product-manager": {
+      "name": "Product Manager",
+      "version": "unknown",
+      "description": "Holistic product leader who owns the full product lifecycle — from discovery and strategy through ro",
+      "author": "unknown",
+      "path": "skills/product-manager/SKILL.md",
+      "files": 1,
+      "content_hash": "4a3fe4661e72e517"
+    },
+    "python-agent-dev": {
+      "name": "python-agent-dev",
+      "version": "unknown",
+      "description": "Python AI Agent 开发模式 — SSE 流式输出、prompt_toolkit TUI、Agentic Loop 回调链、API 响应安全处理",
+      "author": "unknown",
+      "path": "skills/python-agent-dev/SKILL.md",
+      "files": 1,
+      "content_hash": "2f052ce7af3742c3"
+    },
+    "python-debugpy": {
+      "name": "python-debugpy",
+      "version": "1.0.0",
+      "description": "\"Debug Python: pdb REPL + debugpy remote (DAP).\"",
+      "author": "Hermes Agent",
+      "path": "skills/python-debugpy/SKILL.md",
+      "files": 1,
+      "content_hash": "ce7e38367ea54fb8"
+    },
+    "rapid-prototyper": {
+      "name": "Rapid Prototyper",
+      "version": "unknown",
+      "description": "Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and fr",
+      "author": "unknown",
+      "path": "skills/rapid-prototyper/SKILL.md",
+      "files": 1,
+      "content_hash": "327598e2cee41b78"
+    },
+    "reality-checker": {
+      "name": "Reality Checker",
+      "version": "unknown",
+      "description": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelmi",
+      "author": "unknown",
+      "path": "skills/reality-checker/SKILL.md",
+      "files": 1,
+      "content_hash": "748334839b21f5b2"
+    },
+    "requesting-code-review": {
+      "name": "requesting-code-review",
+      "version": "2.0.0",
+      "description": "\"Pre-commit review: security scan, quality gates, auto-fix.\"",
+      "author": "Hermes Agent (adapted from obra/superpowers + MorAlekss)",
+      "path": "skills/requesting-code-review/SKILL.md",
+      "files": 1,
+      "content_hash": "0de2bc3923c28bb2"
+    },
+    "research-paper-writing": {
+      "name": "research-paper-writing",
+      "version": "1.1.0",
+      "description": "\"Write ML papers for NeurIPS/ICML/ICLR: design→submit.\"",
+      "author": "Orchestra Research",
+      "path": "skills/research-paper-writing/SKILL.md",
+      "files": 1,
+      "content_hash": "5bc92cec8357a19d"
+    },
+    "security-engineer": {
+      "name": "Security Engineer",
+      "version": "unknown",
+      "description": "Expert application security engineer specializing in threat modeling, vulnerability assessment, secu",
+      "author": "unknown",
+      "path": "skills/security-engineer/SKILL.md",
+      "files": 1,
+      "content_hash": "d6ce02769f3dbe73"
+    },
+    "segment-anything": {
+      "name": "segment-anything-model",
+      "version": "1.0.0",
+      "description": "\"SAM: zero-shot image segmentation via points, boxes, masks.\"",
+      "author": "Orchestra Research",
+      "path": "skills/segment-anything/SKILL.md",
+      "files": 1,
+      "content_hash": "86440d99e8ec3bd7"
+    },
+    "selenium-element-screenshot": {
+      "name": "selenium-element-screenshot",
+      "version": "unknown",
+      "description": "\"用 Selenium 对网页各区块逐个截图（元素级 screenshot），支持 Retina 高清。适用场景：用户要求截取网页内容、分区块截图、网页可视化存档。\"",
+      "author": "unknown",
+      "path": "skills/selenium-element-screenshot/SKILL.md",
+      "files": 1,
+      "content_hash": "22fe08616f89cfad"
+    },
+    "senior-developer": {
+      "name": "Senior Developer",
+      "version": "unknown",
+      "description": "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integrat",
+      "author": "unknown",
+      "path": "skills/senior-developer/SKILL.md",
+      "files": 1,
+      "content_hash": "63b8da6c12b95f54"
+    },
+    "sketch": {
+      "name": "sketch",
+      "version": "1.0.0",
+      "description": "\"Throwaway HTML mockups: 2-3 design variants to compare.\"",
+      "author": "Hermes Agent (adapted from gsd-build/get-shit-done)",
+      "path": "skills/sketch/SKILL.md",
+      "files": 1,
+      "content_hash": "c643ff8657341b39"
+    },
+    "software-architect": {
+      "name": "Software Architect",
+      "version": "unknown",
+      "description": "Expert software architect specializing in system design, domain-driven design, architectural pattern",
+      "author": "unknown",
+      "path": "skills/software-architect/SKILL.md",
+      "files": 1,
+      "content_hash": "08239f789f83fbd9"
+    },
+    "songsee": {
+      "name": "songsee",
+      "version": "1.0.0",
+      "description": "\"Audio spectrograms/features (mel, chroma, MFCC) via CLI.\"",
+      "author": "community",
+      "path": "skills/songsee/SKILL.md",
+      "files": 1,
+      "content_hash": "d9d8d1394c630bd8"
+    },
+    "songwriting-and-ai-music": {
+      "name": "songwriting-and-ai-music",
+      "version": "unknown",
+      "description": "\"Songwriting craft and Suno AI music prompts.\"",
+      "author": "unknown",
+      "path": "skills/songwriting-and-ai-music/SKILL.md",
+      "files": 1,
+      "content_hash": "093dfa88e5b3596a"
+    },
+    "spike": {
+      "name": "spike",
+      "version": "1.0.0",
+      "description": "\"Throwaway experiments to validate an idea before build.\"",
+      "author": "Hermes Agent (adapted from gsd-build/get-shit-done)",
+      "path": "skills/spike/SKILL.md",
+      "files": 1,
+      "content_hash": "d301bdb6e90a96d0"
+    },
+    "spotify": {
+      "name": "spotify",
+      "version": "1.0.0",
+      "description": "\"Spotify: play, search, queue, manage playlists and devices.\"",
+      "author": "Hermes Agent",
+      "path": "skills/spotify/SKILL.md",
+      "files": 1,
+      "content_hash": "84b4c86e75f08288"
+    },
+    "sprint-prioritizer": {
+      "name": "Sprint Prioritizer",
+      "version": "unknown",
+      "description": "Expert product manager specializing in agile sprint planning, feature prioritization, and resource a",
+      "author": "unknown",
+      "path": "skills/sprint-prioritizer/SKILL.md",
+      "files": 1,
+      "content_hash": "da5233770ca85a39"
+    },
+    "subagent-driven-development": {
+      "name": "subagent-driven-development",
+      "version": "1.1.0",
+      "description": "\"Execute plans via delegate_task subagents (2-stage review).\"",
+      "author": "Hermes Agent (adapted from obra/superpowers)",
+      "path": "skills/subagent-driven-development/SKILL.md",
+      "files": 1,
+      "content_hash": "3fe606f9b2f51279"
+    },
+    "systematic-debugging": {
+      "name": "systematic-debugging",
+      "version": "1.1.0",
+      "description": "\"4-phase root cause debugging: understand bugs before fixing.\"",
+      "author": "Hermes Agent (adapted from obra/superpowers)",
+      "path": "skills/systematic-debugging/SKILL.md",
+      "files": 1,
+      "content_hash": "c1d66056ce0b4ec8"
+    },
+    "teams-meeting-pipeline": {
+      "name": "teams-meeting-pipeline",
+      "version": "1.1.0",
+      "description": "\"Operate the Teams meeting summary pipeline via Hermes CLI — summarize meetings, inspect pipeline st",
+      "author": "Hermes Agent + Teknium",
+      "path": "skills/teams-meeting-pipeline/SKILL.md",
+      "files": 1,
+      "content_hash": "472e8772146f571f"
+    },
+    "technical-writer": {
+      "name": "Technical Writer",
+      "version": "unknown",
+      "description": "Expert technical writer specializing in developer documentation, API references, README files, and t",
+      "author": "unknown",
+      "path": "skills/technical-writer/SKILL.md",
+      "files": 1,
+      "content_hash": "70c8a29cddf7de48"
+    },
+    "test-driven-development": {
+      "name": "test-driven-development",
+      "version": "1.1.0",
+      "description": "\"TDD: enforce RED-GREEN-REFACTOR, tests before code.\"",
+      "author": "Hermes Agent (adapted from obra/superpowers)",
+      "path": "skills/test-driven-development/SKILL.md",
+      "files": 1,
+      "content_hash": "6896c8f090b4bf75"
+    },
+    "touchdesigner-mcp": {
+      "name": "touchdesigner-mcp",
+      "version": "1.1.0",
+      "description": "\"Control a running TouchDesigner instance via twozero MCP — create operators, set parameters, wire c",
+      "author": "kshitijk4poor",
+      "path": "skills/touchdesigner-mcp/SKILL.md",
+      "files": 1,
+      "content_hash": "70a4217786c49122"
+    },
+    "ui-designer": {
+      "name": "UI Designer",
+      "version": "unknown",
+      "description": "Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect int",
+      "author": "unknown",
+      "path": "skills/ui-designer/SKILL.md",
+      "files": 1,
+      "content_hash": "3130768958d3b3d3"
+    },
+    "ux-researcher": {
+      "name": "UX Researcher",
+      "version": "unknown",
+      "description": "Expert user experience researcher specializing in user behavior analysis, usability testing, and dat",
+      "author": "unknown",
+      "path": "skills/ux-researcher/SKILL.md",
+      "files": 1,
+      "content_hash": "25f59c4333df2d0f"
+    },
+    "vllm": {
+      "name": "serving-llms-vllm",
+      "version": "1.0.0",
+      "description": "\"vLLM: high-throughput LLM serving, OpenAI API, quantization.\"",
+      "author": "Orchestra Research",
+      "path": "skills/vllm/SKILL.md",
+      "files": 1,
+      "content_hash": "ab72192b7aee4e6d"
+    },
+    "webhook-subscriptions": {
+      "name": "webhook-subscriptions",
+      "version": "1.1.0",
+      "description": "\"Webhook subscriptions: event-driven agent runs.\"",
+      "author": "unknown",
+      "path": "skills/webhook-subscriptions/SKILL.md",
+      "files": 1,
+      "content_hash": "dfb4ddad9b7911db"
+    },
+    "wechat-mini-program-developer": {
+      "name": "WeChat Mini Program Developer",
+      "version": "unknown",
+      "description": "Expert WeChat Mini Program developer specializing in 小程序 development with WXML/WXSS/WXS, WeChat API ",
+      "author": "unknown",
+      "path": "skills/wechat-mini-program-developer/SKILL.md",
+      "files": 1,
+      "content_hash": "dcda22b2d93c1bbf"
+    },
+    "wechat-miniprogram": {
+      "name": "wechat-miniprogram",
+      "version": "unknown",
+      "description": "\"微信小程序开发、调试、审核拒绝修复。云函数认证、页面加载失败诊断、app.json 配置、WXML/WXSS 常见坑。\"",
+      "author": "unknown",
+      "path": "skills/wechat-miniprogram/SKILL.md",
+      "files": 1,
+      "content_hash": "139f9d97c0911f16"
+    },
+    "weights-and-biases": {
+      "name": "weights-and-biases",
+      "version": "1.0.0",
+      "description": "\"W&B: log ML experiments, sweeps, model registry, dashboards.\"",
+      "author": "Orchestra Research",
+      "path": "skills/weights-and-biases/SKILL.md",
+      "files": 1,
+      "content_hash": "7cabb8bcc0079737"
+    },
+    "workflow-architect": {
+      "name": "Workflow Architect",
+      "version": "unknown",
+      "description": "Workflow design specialist who maps complete workflow trees for every system, user journey, and agen",
+      "author": "unknown",
+      "path": "skills/workflow-architect/SKILL.md",
+      "files": 1,
+      "content_hash": "ab907eef380fdba8"
+    },
+    "writing-plans": {
+      "name": "writing-plans",
+      "version": "1.1.0",
+      "description": "\"Write implementation plans: bite-sized tasks, paths, code.\"",
+      "author": "Hermes Agent (adapted from obra/superpowers)",
+      "path": "skills/writing-plans/SKILL.md",
+      "files": 1,
+      "content_hash": "b930d5746acc1b0c"
+    },
+    "xurl": {
+      "name": "xurl",
+      "version": "1.1.1",
+      "description": "\"X/Twitter via xurl CLI: post, search, DM, media, v2 API.\"",
+      "author": "xdevplatform + openclaw + Hermes Agent",
+      "path": "skills/xurl/SKILL.md",
+      "files": 1,
+      "content_hash": "46a50c6f6d3fd233"
+    },
+    "youtube-content": {
+      "name": "youtube-content",
+      "version": "unknown",
+      "description": "\"YouTube transcripts to summaries, threads, blogs.\"",
+      "author": "unknown",
+      "path": "skills/youtube-content/SKILL.md",
+      "files": 1,
+      "content_hash": "f6e573f84f3f62da"
+    },
+    "yuanbao": {
+      "name": "yuanbao",
+      "version": "1.0.0",
+      "description": "\"Yuanbao (元宝) groups: @mention users, query info/members.\"",
+      "author": "unknown",
+      "path": "skills/yuanbao/SKILL.md",
+      "files": 1,
+      "content_hash": "239e4875f511124f"
+    },
+    "蒙多": {
+      "name": "mundo",
+      "version": "16.0.0",
+      "description": ">",
+      "author": "LiHongwei",
+      "path": "skills/蒙多/SKILL.md",
+      "files": 1,
+      "content_hash": "dee79f9848a051ed"
     }
   },
-  "total_submissions": 1,
-  "last_sync": "2026-06-03T00:00:00Z"
+  "total_submissions": 157,
+  "last_sync": "2026-06-09T13:39:14Z",
+  "total_evolved": 88
 }

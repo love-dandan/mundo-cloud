@@ -49,7 +49,11 @@ def _version_gt(a: str, b: str) -> bool:
 
 def _load_json(path: Path) -> dict:
     if path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
+        # Handle case where file is a JSON array (e.g. evolution_log was initialized as [])
+        if isinstance(data, list):
+            return {"entries": data}
+        return data
     return {}
 
 

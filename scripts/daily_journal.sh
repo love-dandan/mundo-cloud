@@ -89,7 +89,7 @@ if [ "$DRY_RUN" -eq 1 ]; then
     echo "[干运行] 将git commit + push"
 else
     # 设置git用户信息（GitHub Actions环境需要）
-    git config user.email "mundo@love-dandan.github.io"
+    git config user.email "mundo@lihongwei-cn.github.io"
     git config user.name "Mundo Bot"
     
     git add -A
