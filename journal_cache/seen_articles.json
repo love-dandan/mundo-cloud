@@ -110,5 +110,81 @@
   "9c07ebef03251fa2": {
     "title": "Human\\xe2\\x80\\x93AI interactions reshape the self and our social networks",
     "crawled_at": "2026-06-10T21:34:47.063635"
+  },
+  "5ee4b3b2ccc4ce85": {
+    "title": "Gen Z scepticism towards AI is a wake-up call \\xe2\\x80\\x94 universities must take it seriously",
+    "crawled_at": "2026-06-10T21:40:38.350281"
+  },
+  "7558cb93c7ed59b8": {
+    "title": "Doubting Thomas",
+    "crawled_at": "2026-06-10T21:40:38.350281"
+  },
+  "0da7a9555ff26044": {
+    "title": "Author Correction: De novo design of quasisymmetric two-component protein cages",
+    "crawled_at": "2026-06-10T21:40:38.350281"
+  },
+  "f987678f9472ff21": {
+    "title": "A 0-click exploit chain for the Pixel 10: When a Door Closes, a Window Opens",
+    "crawled_at": "2026-06-10T21:56:32.974905"
+  },
+  "dc07f52754df3aaf": {
+    "title": "On the Effectiveness of Mutational Grammar Fuzzing",
+    "crawled_at": "2026-06-10T21:56:32.974905"
+  },
+  "edc5d020509ca227": {
+    "title": "Business World Model",
+    "crawled_at": "2026-06-10T22:00:43.271751"
+  },
+  "35fa38f4c574d726": {
+    "title": "Deployment-Time Memorization in Foundation-Model Agents",
+    "crawled_at": "2026-06-10T22:00:43.271751"
+  },
+  "2f6857cbb070e2b1": {
+    "title": "Safecloud: A Distributed, Encrypted Storage Cloud for Streaming",
+    "crawled_at": "2026-06-10T22:00:45.558301"
+  },
+  "e3cb9b93793f7313": {
+    "title": "IDP-Bench: Benchmarking ability of LLMs to protect personal information in interdependent privacy contexts",
+    "crawled_at": "2026-06-10T22:00:45.558301"
+  },
+  "a33d1147d4bf8a4f": {
+    "title": "Can Voice Agents Handle Bilingual Customers? Benchmarking Frontier ASR on Code-Switched Speech",
+    "crawled_at": "2026-06-10T22:00:58.119440"
+  },
+  "9f09f6a898b798ff": {
+    "title": "Introducing North Mini Code: Cohere’s First Model For Developers",
+    "crawled_at": "2026-06-10T22:00:58.119440"
+  },
+  "0b396ba4d5339b4b": {
+    "title": "From data to decisions: how LSEG is scaling trusted AI",
+    "crawled_at": "2026-06-10T22:01:01.406719"
+  },
+  "61d070001d2b289f": {
+    "title": "How engineers at Nextdoor use Codex to build without limits",
+    "crawled_at": "2026-06-10T22:01:01.406719"
+  },
+  "cf5a5230b683def1": {
+    "title": "Your Automated Pentest Looks Clean. See What It Missed in This Expert Webinar",
+    "crawled_at": "2026-06-10T22:01:09.133025"
+  },
+  "16ad81c0e1bfa4a4": {
+    "title": "Microsoft Patches Record 206 Flaws, Including Three Zero-Days and Critical RCE Bugs",
+    "crawled_at": "2026-06-10T22:01:09.133025"
+  },
+  "c2c73a761f636192": {
+    "title": "A Record-Breaking Patch Tuesday for June 2026",
+    "crawled_at": "2026-06-10T22:01:24.566825"
+  },
+  "4436e3ae6b63c98a": {
+    "title": "Hackers Used Meta’s AI Support Bot to Seize Instagram Accounts",
+    "crawled_at": "2026-06-10T22:01:24.566825"
+  },
+  "9df332b016f338b6": {
+    "title": "A Deep Dive into the GetProcessHandleFromHwnd API",
+    "crawled_at": "2026-06-10T22:01:47.599509"
+  },
+  "46b8be54a08171ea": {
+    "title": "Bypassing Administrator Protection by Abusing UI Access",
+    "crawled_at": "2026-06-10T22:01:47.599509"
   }
 }

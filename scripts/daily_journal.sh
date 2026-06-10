@@ -29,7 +29,7 @@ done
 cd "$REPO_ROOT"
 
 echo "╔════════════════════════════════════════════════════════════╗"
-echo "║          蒙多每日期刊学习系统                              ║"
+echo "║       蒙多每日AI+安全学习系统                              ║"
 echo "╚════════════════════════════════════════════════════════════╝"
 echo ""
 echo "开始时间: $(date '+%Y-%m-%d %H:%M:%S')"
@@ -70,14 +70,19 @@ echo "━━━ 第三步：同步到本地skills ━━━"
 if [ "$DRY_RUN" -eq 1 ]; then
     echo "[干运行] 将同步到 ~/.hermes/skills/"
 else
-    # 同步journal-learnings目录到本地
-    LOCAL_SKILLS="$HOME/.hermes/skills/journal-learnings"
+    # 同步learning目录到本地
+    LOCAL_SKILLS="$HOME/.hermes/skills/learning"
     mkdir -p "$LOCAL_SKILLS"
-    
-    if [ -d "$REPO_ROOT/skills/journal-learnings" ]; then
-        rsync -av --delete \
-            "$REPO_ROOT/skills/journal-learnings/" \
-            "$LOCAL_SKILLS/" 2>&1 | tail -5
+
+    if [ -d "$REPO_ROOT/skills/learning" ]; then
+        # Windows 下 rsync 可能不可用，用 cp 兜底
+        if command -v rsync &>/dev/null; then
+            rsync -av --delete \
+                "$REPO_ROOT/skills/learning/" \
+                "$LOCAL_SKILLS/" 2>&1 | tail -5
+        else
+            cp -r "$REPO_ROOT/skills/learning/"* "$LOCAL_SKILLS/" 2>/dev/null
+        fi
         echo "已同步到 $LOCAL_SKILLS"
     fi
 fi
@@ -98,7 +103,7 @@ else
         echo "没有变更需要提交"
     else
         DATE_STR=$(date '+%Y-%m-%d')
-        git commit -m "feat: 蒙多期刊学习 $DATE_STR — 新增 $TOTAL_CRAWLED 篇论文知识" 2>&1
+        git commit -m "feat: 蒙多AI+安全学习 $DATE_STR — 新增 $TOTAL_CRAWLED 条情报" 2>&1
         echo "已提交"
         
         # 推送到远程

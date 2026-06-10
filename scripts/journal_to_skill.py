@@ -1,207 +1,210 @@
 #!/usr/bin/env python3
-"""journal_to_skill.py — 将期刊文章转化为Mundo skill"""
+"""journal_to_skill.py — 将AI/安全情报转化为蒙多学习技能"""
 
 import json
-import os
 import re
 import sys
 from datetime import datetime
 from pathlib import Path
 
-# 配置
 JOURNAL_CACHE = Path(__file__).parent.parent / "journal_cache"
-SKILLS_OUTPUT = Path(__file__).parent.parent / "skills" / "journal-learnings"
-MAX_SUMMARY_LENGTH = 200
+SKILLS_OUTPUT = Path(__file__).parent.parent / "skills" / "learning"
+MAX_SUMMARY_LENGTH = 300
+
+# 领域标签映射
+DOMAIN_TAGS = {
+    "ai": ["AI", "机器学习", "人工智能"],
+    "security": ["网络安全", "信息安全", "安全研究"],
+}
+
+# 关键发现识别词（英文 + 中文）
+FINDING_KEYWORDS = [
+    # 通用
+    'find', 'show', 'demonstrate', 'reveal', 'discover', 'propose',
+    'develop', 'achieve', 'improve', 'novel', 'new', 'result',
+    '突破', '发现', '提出', '开发', '实现', '改进', '创新',
+    # 安全
+    'vulnerability', 'exploit', 'attack', 'CVE', 'zero-day', 'patch',
+    'ransomware', 'malware', 'breach', 'APT', 'bypass', 'disclosure',
+    '漏洞', '攻击', '勒索', '恶意', '补丁', '入侵', '绕过',
+    # AI
+    'model', 'training', 'transformer', 'LLM', 'GPT', 'fine-tune',
+    'benchmark', 'state-of-the-art', 'SOTA', 'performance',
+    '模型', '训练', '推理', '大模型', '性能', '参数',
+]
 
 
 def sanitize_filename(title):
-    """将标题转为安全的文件名"""
-    import re
-    # 清理CDATA标签
+    """清洗标题为安全文件名"""
     title = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', title, flags=re.DOTALL)
-    # 清理HTML实体
     title = re.sub(r'&lt;', '<', title)
     title = re.sub(r'&gt;', '>', title)
     title = re.sub(r'&amp;', '&', title)
     title = re.sub(r'&quot;', '"', title)
     title = re.sub(r'&#39;', "'", title)
-    # 移除特殊字符，保留字母数字和中文
-    safe = re.sub(r'[^\w\s\u4e00-\u9fff-]', '', title)
-    # 替换空格为连字符
+    safe = re.sub(r'[^\w\s一-鿿-]', '', title)
     safe = re.sub(r'[\s]+', '-', safe.strip())
-    # 截断过长的名称
     return safe[:60].rstrip('-')
 
 
 def generate_skill_name(article):
-    """生成skill名称"""
-    journal = article.get('journal', 'unknown').lower()
-    journal = re.sub(r'[^a-z]', '-', journal).strip('-')
-    
-    # 从标题提取关键词
+    """生成技能名称"""
+    source = article.get('source', 'unknown').lower()
+    source = re.sub(r'[^a-z]', '-', source).strip('-')
     title_words = article['title'].lower().split()[:3]
-    title_slug = '-'.join(re.sub(r'[^a-z0-9\u4e00-\u9fff]', '', w) for w in title_words if w)
-    
+    title_slug = '-'.join(
+        re.sub(r'[^a-z0-9一-鿿]', '', w)
+        for w in title_words if w
+    )
     date_str = datetime.now().strftime('%Y%m%d')
-    return f"journal-{journal}-{title_slug}-{date_str}"
+    return f"learn-{source}-{title_slug}-{date_str}"
 
 
 def extract_key_findings(summary):
-    """从摘要中提取关键发现"""
+    """提取关键技术发现"""
     if not summary:
         return []
-    
-    # 简单提取：按句子分割，保留有实质内容的句子
-    sentences = re.split(r'[.。!！?？]', summary)
+    sentences = re.split(r'[.。!！?？\n]', summary)
     findings = []
-    
     for s in sentences:
         s = s.strip()
-        # 跳过太短的句子
-        if len(s) < 20:
+        if len(s) < 25:
             continue
-        # 保留包含关键信息的句子
-        keywords = ['find', 'show', 'demonstrate', 'reveal', 'discover', 'propose', 
-                    'develop', 'achieve', 'improve', 'novel', 'new', 'result',
-                    '发现', '提出', '开发', '实现', '改进', '创新', '结果', '表明']
-        if any(kw in s.lower() for kw in keywords):
+        if any(kw in s.lower() for kw in FINDING_KEYWORDS):
             findings.append(s)
-    
-    return findings[:5]  # 最多5条
+    return findings[:5]
+
+
+def clean_text(text):
+    """清洗文本中的XML/HTML杂质"""
+    if not text:
+        return ''
+    text = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', text, flags=re.DOTALL)
+    for entity, char in [
+        ('&lt;', '<'), ('&gt;', '>'), ('&amp;', '&'),
+        ('&quot;', '"'), ('&#39;', "'"), ('&#x27;', "'"),
+    ]:
+        text = text.replace(entity, char)
+    text = ' '.join(text.split())
+    return text.strip()
 
 
 def generate_skill_content(article):
-    """生成skill格式的内容"""
-    import re
-    
-    def clean_cdata(text):
-        """清理CDATA标签和HTML实体"""
-        if not text:
-            return ''
-        # 移除CDATA标签
-        text = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', text, flags=re.DOTALL)
-        # 清理HTML实体
-        text = re.sub(r'&lt;', '<', text)
-        text = re.sub(r'&gt;', '>', text)
-        text = re.sub(r'&amp;', '&', text)
-        text = re.sub(r'&quot;', '"', text)
-        text = re.sub(r'&#39;', "'", text)
-        # 清理空白
-        text = ' '.join(text.split())
-        return text.strip()
-    
+    """生成完整的技能Markdown"""
     skill_name = generate_skill_name(article)
     date_str = datetime.now().strftime('%Y-%m-%d')
+    clean_title = clean_text(article['title'])
     key_findings = extract_key_findings(article.get('summary', ''))
-    
-    # 清理标题
-    clean_title = clean_cdata(article['title'])
-    
-    # 生成frontmatter
+    domain = article.get('domain', 'tech')
+    category = article.get('category', 'general')
+
+    # 生成标签
+    tags = [domain, category]
+    if domain in DOMAIN_TAGS:
+        tags.extend(DOMAIN_TAGS[domain])
+
     frontmatter = f"""---
 name: {skill_name}
 description: >
-  学术期刊学习笔记：{article['journal']} - {clean_title[:80]}
-  蒙多每日期刊学习系统自动提取。
+  [{domain.upper()}] {article.get('source', 'Unknown')} — {clean_title[:80]}
+  蒙多AI+安全每日学习系统自动提取。
 version: 1.0.0
-author: mundo-journal-bot
-priority: LOW
+author: mundo-learning-bot
+priority: MEDIUM
 auto_activate: MANUAL
-category: journal-learnings
-source: {article['journal']}
+category: learning
+domain: {domain}
+source: {article.get('source', 'unknown')}
 published: {article.get('published', 'unknown')}
 learned: {date_str}
+tags: {tags}
 ---"""
 
-    # 生成正文
     body = f"""
 # {clean_title}
 
-**来源**: [{article['journal']}]({article['link']})
+**来源**: [{article.get('source', 'Unknown')}]({article['link']})
+**领域**: {domain.upper()}
+**分类**: {category}
 **学习日期**: {date_str}
 
 ---
 
-## 摘要
+## 内容摘要
 
-{clean_cdata(article.get('summary', '暂无摘要'))}
+{clean_text(article.get('summary', '暂无摘要'))}
 
-## 关键发现
+## 关键技术点
 
 """
-    
+
     if key_findings:
         for i, finding in enumerate(key_findings, 1):
             body += f"{i}. {finding}\n"
     else:
-        body += "待补充...\n"
-    
-    body += f"""
-## 蒙多笔记
+        body += "待人工分析补充...\n"
 
-> 蒙多从此文中学到：{clean_title[:50]}...
-> 此知识已纳入蒙多的学术知识库。
+    body += f"""
+## 蒙多战术笔记
+
+> 🎯 **领域**: {domain.upper()}
+> 💡 **要点**: {clean_title[:60]}...
+> 🔗 **原文**: {article['link']}
+>
+> 此知识已纳入蒙多AI+安全知识库，随时可调用。
 
 ---
 
-*由蒙多期刊学习系统自动生成*
+*由蒙多AI+安全每日学习系统自动生成*
 """
-    
     return skill_name, frontmatter + body
 
 
 def process_articles(articles_file=None):
-    """处理文章并生成skills"""
-    # 确定输入文件
+    """处理文章缓存并生成技能文件"""
     if articles_file:
         input_path = Path(articles_file)
     else:
-        # 查找最新的文章文件
         article_files = sorted(JOURNAL_CACHE.glob("articles_*.json"), reverse=True)
         if not article_files:
-            print("没有找到待处理的文章")
+            print("没有找到待处理的文章缓存")
             return 0
         input_path = article_files[0]
-    
-    # 读取文章
+
     with open(input_path, 'r', encoding='utf-8') as f:
         articles = json.load(f)
-    
+
     if not articles:
         print("文章列表为空")
         return 0
-    
-    # 确保输出目录存在
+
     SKILLS_OUTPUT.mkdir(parents=True, exist_ok=True)
-    
-    # 处理每篇文章
     created_count = 0
+
     for article in articles:
         try:
             skill_name, content = generate_skill_content(article)
             skill_file = SKILLS_OUTPUT / f"{skill_name}.md"
-            
-            # 跳过已存在的skill
+
             if skill_file.exists():
                 print(f"  跳过（已存在）: {skill_name}")
                 continue
-            
-            # 写入skill文件
+
             with open(skill_file, 'w', encoding='utf-8') as f:
                 f.write(content)
-            
+
             print(f"  创建: {skill_name}")
             created_count += 1
-            
+
         except Exception as e:
-            print(f"  处理失败 [{article.get('title', 'unknown')}]: {e}")
-    
-    print(f"\n共创建 {created_count} 个新skill")
+            print(f"  失败 [{article.get('title', '?')[:40]}]: {e}")
+
+    print(f"\n共创建 {created_count} 个新技能")
     return created_count
 
 
 def generate_daily_digest(articles_file=None):
-    """生成每日摘要skill"""
+    """生成每日学习摘要"""
     if articles_file:
         input_path = Path(articles_file)
     else:
@@ -209,86 +212,101 @@ def generate_daily_digest(articles_file=None):
         if not article_files:
             return None
         input_path = article_files[0]
-    
+
     with open(input_path, 'r', encoding='utf-8') as f:
         articles = json.load(f)
-    
+
     if not articles:
         return None
-    
+
     date_str = datetime.now().strftime('%Y%m%d')
-    skill_name = f"journal-daily-digest-{date_str}"
-    
+    display_date = datetime.now().strftime('%Y-%m-%d')
+    skill_name = f"learn-daily-digest-{date_str}"
+
+    # 统计
+    ai_count = sum(1 for a in articles if a.get('domain') == 'ai')
+    sec_count = sum(1 for a in articles if a.get('domain') == 'security')
+
     frontmatter = f"""---
 name: {skill_name}
 description: >
-  蒙多每日学术期刊摘要：{datetime.now().strftime('%Y年%m月%d日')}
-  包含{len(articles)}篇来自Nature/Science/Cell等顶级期刊的最新研究。
+  蒙多每日AI+安全学习摘要：{datetime.now().strftime('%Y年%m月%d日')}
+  包含{len(articles)}条AI前沿与网络安全情报。
+  其中AI {ai_count}条，安全 {sec_count}条。
 version: 1.0.0
-author: mundo-journal-bot
-priority: MEDIUM
+author: mundo-learning-bot
+priority: HIGH
 auto_activate: MANUAL
-category: journal-learnings
+category: learning
 ---"""
 
     body = f"""
-# 蒙多每日学术摘要 — {datetime.now().strftime('%Y-%m-%d')}
+# 蒙多每日AI+安全摘要 — {display_date}
 
-今日共学习 **{len(articles)}** 篇学术论文。
+今日共捕获 **{len(articles)}** 条情报（🤖 AI: {ai_count} | 🔒 安全: {sec_count}）
 
 ---
 
-## 文章列表
+## 情报列表
 
 """
-    
-    # 按期刊分组
-    by_journal = {}
+
+    # 按领域+来源分组
+    by_domain = {}
     for article in articles:
-        journal = article.get('journal', 'Unknown')
-        if journal not in by_journal:
-            by_journal[journal] = []
-        by_journal[journal].append(article)
-    
-    for journal, journal_articles in by_journal.items():
-        body += f"\n### {journal}\n\n"
-        for i, article in enumerate(journal_articles, 1):
-            body += f"{i}. **{article['title']}**\n"
-            if article.get('summary'):
-                summary = article['summary'][:150] + '...' if len(article['summary']) > 150 else article['summary']
-                body += f"   > {summary}\n"
-            body += f"   [阅读原文]({article['link']})\n\n"
-    
+        domain = article.get('domain', '其他')
+        if domain not in by_domain:
+            by_domain[domain] = {}
+        source = article.get('source', 'Unknown')
+        if source not in by_domain[domain]:
+            by_domain[domain][source] = []
+        by_domain[domain][source].append(article)
+
+    domain_icons = {'ai': '🤖', 'security': '🔒'}
+
+    for domain, sources in by_domain.items():
+        icon = domain_icons.get(domain, '📌')
+        body += f"\n### {icon} {domain.upper()}\n\n"
+        for source, items in sources.items():
+            body += f"#### {source}\n\n"
+            for i, article in enumerate(items, 1):
+                body += f"{i}. **{clean_text(article['title'])}**\n"
+                if article.get('summary'):
+                    s = clean_text(article['summary'])[:200]
+                    body += f"   > {s}{'...' if len(article.get('summary', '')) > 200 else ''}\n"
+                body += f"   [阅读原文]({article['link']})\n\n"
+
     body += f"""
 ---
 
-## 蒙多评注
+## 蒙多战报
 
-> 今日蒙多扫荡{len(by_journal)}家学术期刊，掠夺{len(articles)}篇论文知识。
-> 所有知识已纳入蒙多学术知识库，随时可供调用。
+> 📡 今日扫描 **{len(by_domain)}** 个领域、**{len(articles)}** 条情报。
+> 🤖 AI 阵地: {ai_count} 条前沿动态
+> 🔒 安全阵地: {sec_count} 条威胁情报
+> 全部纳入了蒙多AI+安全知识库。
 
 ---
 
-*由蒙多期刊学习系统自动生成*
+*由蒙多AI+安全每日学习系统自动生成*
 """
-    
-    # 写入摘要skill
+
     skill_file = SKILLS_OUTPUT / f"{skill_name}.md"
     with open(skill_file, 'w', encoding='utf-8') as f:
         f.write(frontmatter + body)
-    
+
     print(f"生成每日摘要: {skill_name}")
     return skill_name
 
 
 if __name__ == '__main__':
     articles_file = sys.argv[1] if len(sys.argv) > 1 else None
-    
-    print("=== 蒙多期刊学习系统 ===\n")
-    print("处理文章...")
+
+    print("=== 蒙多AI+安全学习系统 ===\n")
+    print("处理情报...")
     count = process_articles(articles_file)
-    
+
     print("\n生成每日摘要...")
     digest = generate_daily_digest(articles_file)
-    
-    print(f"\n完成！创建 {count} 个文章skill + 1 个每日摘要")
+
+    print(f"\n完成！创建 {count} 个学习技能 + 1 个每日摘要")

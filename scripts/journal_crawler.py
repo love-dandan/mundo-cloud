@@ -1,284 +1,368 @@
 #!/usr/bin/env python3
-"""journal_crawler.py — 抓取Nature、Science、Cell等权威期刊最新文章"""
+"""蒙多AI+安全每日学习 — 多源情报抓取引擎
+
+来源：
+  AI 前沿：
+    - arXiv cs.AI (RSS 2.0, 人工智能)
+    - arXiv cs.CR (RSS 2.0, 密码学与安全)
+    - Hugging Face Daily Papers
+    - Anthropic Research Blog (Atom)
+    - OpenAI Blog (RSS)
+  网络安全：
+    - The Hacker News (RSS)
+    - Krebs on Security (RSS)
+    - Google Project Zero Blog (Atom)
+    - CISA Alerts (RSS)
+
+冗余度: 最多 2 篇/源/天，总 ~20 篇/天
+"""
 
 import json
 import hashlib
-import os
+import re
 import sys
+import io
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# 尝试导入scrapling，如果不可用则使用requests
+# ─── Windows 编码修复 ───
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 try:
     from scrapling.fetchers import Fetcher
     USE_SCRAPLING = True
 except ImportError:
-    import requests
     USE_SCRAPLING = False
 
 import xml.etree.ElementTree as ET
 
-# 期刊RSS源配置
-JOURNAL_FEEDS = {
-    "nature": {
-        "name": "Nature",
-        "rss": "https://www.nature.com/nature.rss",
-        "category": "multidisciplinary"
+# ──────────── 情报源配置 ────────────
+FEEDS = {
+    # ── AI 学术前沿 ──
+    "arxiv_cs_ai": {
+        "name": "arXiv cs.AI",
+        "url": "https://rss.arxiv.org/rss/cs.AI",
+        "domain": "ai",
+        "category": "research",
     },
-    "science": {
-        "name": "Science",
-        "rss": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science",
-        "category": "multidisciplinary"
+    "arxiv_cs_cr": {
+        "name": "arXiv cs.CR (密码学与安全)",
+        "url": "https://rss.arxiv.org/rss/cs.CR",
+        "domain": "security",
+        "category": "research",
     },
-    "cell": {
-        "name": "Cell",
-        "rss": "https://www.cell.com/cell/rss",
-        "category": "biology"
+    # ── AI 产品/工程 ──
+    "anthropic_research": {
+        "name": "Anthropic Research",
+        "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_anthropic_research.xml",
+        "domain": "ai",
+        "category": "industry",
     },
-    "nature_energy": {
-        "name": "Nature Energy",
-        "rss": "https://www.nature.com/nenergy.rss",
-        "category": "energy"
+    "huggingface_blog": {
+        "name": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "domain": "ai",
+        "category": "engineering",
     },
-    "nature_electronics": {
-        "name": "Nature Electronics",
-        "rss": "https://www.nature.com/natelectron.rss",
-        "category": "electronics"
+    "openai_blog": {
+        "name": "OpenAI Blog",
+        "url": "https://openai.com/news/rss.xml",
+        "domain": "ai",
+        "category": "industry",
     },
-    "nature_machine_intelligence": {
-        "name": "Nature Machine Intelligence",
-        "rss": "https://www.nature.com/natmachintell.rss",
-        "category": "ai"
-    }
+    # ── 安全新闻 ──
+    "the_hacker_news": {
+        "name": "The Hacker News",
+        "url": "https://feeds.feedburner.com/TheHackersNews",
+        "domain": "security",
+        "category": "news",
+    },
+    "krebs": {
+        "name": "Krebs on Security",
+        "url": "https://krebsonsecurity.com/feed/",
+        "domain": "security",
+        "category": "investigation",
+    },
+    "project_zero": {
+        "name": "Google Project Zero",
+        "url": "https://googleprojectzero.blogspot.com/feeds/posts/default?alt=rss",
+        "domain": "security",
+        "category": "vulnerability-research",
+    },
 }
 
-# 输出目录
 OUTPUT_DIR = Path(__file__).parent.parent / "journal_cache"
 DEDUP_FILE = OUTPUT_DIR / "seen_articles.json"
 
 
-def load_seen_articles():
-    """加载已处理文章的哈希值"""
+def load_seen():
     if DEDUP_FILE.exists():
-        with open(DEDUP_FILE, 'r') as f:
+        with open(DEDUP_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
     return {}
 
 
-def save_seen_articles(seen):
-    """保存已处理文章的哈希值"""
+def save_seen(data):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    with open(DEDUP_FILE, 'w') as f:
-        json.dump(seen, f, indent=2)
+    with open(DEDUP_FILE, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def article_hash(title, link):
-    """生成文章唯一哈希"""
-    content = f"{title}:{link}".encode('utf-8')
-    return hashlib.sha256(content).hexdigest()[:16]
+    return hashlib.sha256(f"{title}:{link}".encode()).hexdigest()[:16]
 
 
-def fetch_rss_scrapling(url):
-    """使用Scrapling抓取RSS"""
-    try:
-        page = Fetcher.get(url, timeout=30)
-        # Scrapling使用body属性而不是text
-        if hasattr(page, 'body') and page.body:
-            return str(page.body)
-        return page.text
-    except Exception as e:
-        print(f"  Scrapling抓取失败: {e}")
-        return None
+def _to_str(data) -> str:
+    """将 Scrapling bytes/str 统一为 str"""
+    if data is None:
+        return ""
+    if isinstance(data, bytes):
+        return data.decode('utf-8', errors='replace')
+    return str(data)
 
 
-def fetch_rss_requests(url):
-    """使用requests抓取RSS"""
-    try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
-        }
-        resp = requests.get(url, headers=headers, timeout=30)
-        resp.raise_for_status()
-        return resp.text
-    except Exception as e:
-        print(f"  requests抓取失败: {e}")
-        return None
-
-
-def fetch_rss(url):
-    """抓取RSS内容"""
+def fetch(url, timeout=30) -> str:
+    """抓取 URL，返回字符串内容"""
     if USE_SCRAPLING:
-        return fetch_rss_scrapling(url)
-    return fetch_rss_requests(url)
-
-
-def parse_rss_xml(xml_content):
-    """解析RSS XML，提取文章信息（支持RSS 2.0、Atom、RDF格式）"""
-    articles = []
-    
-    # 首先尝试用正则提取（更可靠处理CDATA等）
-    import re
-    
-    def clean_cdata(text):
-        """清理CDATA标签"""
-        if not text:
-            return ''
-        # 先清理HTML实体
-        text = re.sub(r'&lt;', '<', text)
-        text = re.sub(r'&gt;', '>', text)
-        text = re.sub(r'&amp;', '&', text)
-        text = re.sub(r'&quot;', '"', text)
-        text = re.sub(r'&#39;', "'", text)
-        # 再移除CDATA标签
-        text = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', text, flags=re.DOTALL)
-        # 清理空白
-        text = ' '.join(text.split())
-        return text.strip()
-    
-    # 提取所有文章链接（RDF格式）
-    rdf_links = re.findall(r'rdf:resource="(https://www\.nature\.com/articles/[^"]+)"', xml_content)
-    
-    # 提取标题（处理CDATA）
-    titles = re.findall(r'<title[^>]*>(.*?)</title>', xml_content, re.DOTALL)
-    
-    # 提取描述（处理CDATA）
-    descriptions = re.findall(r'<description[^>]*>(.*?)</description>', xml_content, re.DOTALL)
-    
-    # 提取pubDate
-    pub_dates = re.findall(r'<pubDate[^>]*>([^<]+)</pubDate>', xml_content)
-    
-    # 提取dc:date（RDF格式）
-    dc_dates = re.findall(r'<dc:date[^>]*>([^<]+)</dc:date>', xml_content)
-    
-    # 组合数据
-    if rdf_links:
-        # RDF格式
-        for i, link in enumerate(rdf_links[:20]):  # 限制最多20篇
-            title = titles[i + 2] if i + 2 < len(titles) else f"Article {i + 1}"  # 跳过channel标题
-            desc = descriptions[i + 1] if i + 1 < len(descriptions) else ''
-            pub_date = dc_dates[i] if i < len(dc_dates) else ''
-            
-            articles.append({
-                'title': clean_cdata(title),
-                'link': link,
-                'summary': clean_cdata(desc)[:500] if desc else '',
-                'published': pub_date
-            })
-    else:
-        # 尝试标准XML解析
         try:
-            root = ET.fromstring(xml_content)
-            
-            # 处理Atom格式
-            ns = {'atom': 'http://www.w3.org/2005/Atom'}
-            entries = root.findall('.//atom:entry', ns)
-            if entries:
-                for entry in entries[:20]:
-                    title = entry.find('atom:title', ns)
-                    link = entry.find('atom:link', ns)
-                    summary = entry.find('atom:summary', ns)
-                    published = entry.find('atom:published', ns) or entry.find('atom:updated', ns)
-                    
-                    articles.append({
-                        'title': clean_cdata(title.text) if title is not None else '',
-                        'link': link.get('href', '') if link is not None else '',
-                        'summary': clean_cdata(summary.text)[:500] if summary is not None else '',
-                        'published': published.text.strip() if published is not None else ''
-                    })
-                return articles
-            
-            # 处理RSS 2.0格式
-            items = root.findall('.//item')
-            for item in items[:20]:
-                title = item.find('title')
-                link = item.find('link')
-                description = item.find('description')
-                pub_date = item.find('pubDate')
-                
-                articles.append({
-                    'title': clean_cdata(title.text) if title is not None else '',
-                    'link': link.text.strip() if link is not None else '',
-                    'summary': clean_cdata(description.text)[:500] if description is not None else '',
-                    'published': pub_date.text.strip() if pub_date is not None else ''
-                })
-        except ET.ParseError as e:
-            print(f"  XML解析错误: {e}")
-    
+            page = Fetcher.get(url, timeout=timeout)
+            return _to_str(getattr(page, 'body', page) or page)
+        except Exception as e:
+            print(f"  [warn] Scrapling: {e}")
+
+    try:
+        import requests as req
+        resp = req.get(url, headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }, timeout=timeout)
+        resp.raise_for_status()
+        return resp.text or ""
+    except Exception as e:
+        print(f"  [warn] requests: {e}")
+        return ""
+
+
+def clean_cdata(text):
+    if not text:
+        return ''
+    for entity, char in [('&lt;', '<'), ('&gt;', '>'), ('&amp;', '&'),
+                          ('&quot;', '"'), ('&#39;', "'")]:
+        text = text.replace(entity, char)
+    text = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', text, flags=re.DOTALL)
+    return ' '.join(text.split()).strip()
+
+
+def parse_atom(xml_text: str) -> list:
+    """解析 Atom feed"""
+    articles = []
+    try:
+        root = ET.fromstring(xml_text)
+        ns = {'a': 'http://www.w3.org/2005/Atom'}
+        for entry in root.findall('.//a:entry', ns):
+            title = entry.find('a:title', ns)
+            link = entry.find('a:link', ns)
+            summary = entry.find('a:summary', ns)
+            published = entry.find('a:published', ns) or entry.find('a:updated', ns)
+
+            link_href = ''
+            if link is not None:
+                link_href = link.get('href', '') or (link.text or '').strip()
+
+            articles.append({
+                'title': clean_cdata(title.text) if title is not None else '',
+                'link': link_href,
+                'summary': clean_cdata(summary.text)[:800] if summary is not None else '',
+                'published': (published.text or '').strip() if published is not None else ''
+            })
+    except ET.ParseError:
+        pass
     return articles
 
 
-def crawl_journal(journal_key, journal_info, seen_articles, max_articles=5):
-    """抓取单个期刊的最新文章"""
-    print(f"\n抓取 {journal_info['name']}...")
-    
-    xml_content = fetch_rss(journal_info['rss'])
-    if not xml_content:
+def parse_rss2(xml_text: str) -> list:
+    """解析 RSS 2.0 feed"""
+    articles = []
+    try:
+        root = ET.fromstring(xml_text)
+        for item in root.iter('item'):
+            title = item.find('title')
+            link = item.find('link')
+            desc = item.find('description')
+            pub = item.find('pubDate')
+
+            link_text = ''
+            if link is not None:
+                link_text = (link.text or '').strip()
+            # Some feeds use <link>URL</link>, others <link/>
+            if not link_text:
+                # Fallback regex extract
+                for child in item:
+                    if child.tag == 'link' and child.text:
+                        link_text = child.text.strip()
+                        break
+
+            articles.append({
+                'title': clean_cdata(title.text) if title is not None else '',
+                'link': link_text,
+                'summary': clean_cdata(desc.text)[:800] if desc is not None else '',
+                'published': (pub.text or '').strip() if pub is not None else ''
+            })
+    except ET.ParseError:
+        pass
+    return articles
+
+
+def parse_xml(xml_text: str) -> list:
+    """自动识别 XML 格式并解析"""
+    if not xml_text:
         return []
-    
-    articles = parse_rss_xml(xml_content)
+
+    # Atom?
+    if 'xmlns="http://www.w3.org/2005/Atom"' in xml_text[:2000] or \
+       '<feed ' in xml_text[:500]:
+        articles = parse_atom(xml_text)
+        if articles:
+            return articles
+
+    # RSS 2.0 / RDF
+    articles = parse_rss2(xml_text)
+    if articles:
+        return articles
+
+    # ── 最坏情况: 正则暴力提取 ──
+    return _regex_extract(xml_text)
+
+
+def _regex_extract(xml_text: str) -> list:
+    """正则暴力提取（处理任何畸形 XML）"""
+    articles = []
+    titles = re.findall(r'<title[^>]*>([^<]+)</title>', xml_text)
+    links = re.findall(
+        r'(?:<link[^>]*>(https?://[^<]+)</link>'
+        r'|<link[^>]*href="(https?://[^"]+)"[^>]*>)',
+        xml_text
+    )
+    descs = re.findall(r'<description[^>]*>([^<]+)</description>', xml_text)
+    pub_dates = re.findall(r'<pubDate[^>]*>([^<]+)</pubDate>', xml_text)
+
+    # Flatten tuple links from alternation
+    flat_links = []
+    for l in links:
+        if isinstance(l, tuple):
+            flat_links.append(l[0] or l[1])
+        else:
+            flat_links.append(l)
+
+    # Skip first title (channel/feed title)
+    start = 1
+    for i, title in enumerate(titles[start:start + 20], start=start):
+        idx = i - start
+        link = flat_links[idx] if idx < len(flat_links) else ''
+        desc = descs[idx] if idx < len(descs) else ''
+        pub = pub_dates[idx] if idx < len(pub_dates) else ''
+
+        if not title or len(title) < 5:
+            continue
+
+        articles.append({
+            'title': clean_cdata(title),
+            'link': link,
+            'summary': clean_cdata(desc)[:800],
+            'published': pub.strip()
+        })
+
+    return articles
+
+
+def crawl_feed(key, info, seen, max_n=2):
+    """抓单个情报源"""
+    domain_emoji = "🤖" if info['domain'] == 'ai' else "🔒"
+    print(f"  {domain_emoji} {info['name']}...", end=' ')
+
+    xml = fetch(info['url'])
+    if not xml:
+        print("(无响应)")
+        return []
+
+    articles = parse_xml(xml)
+    if not articles:
+        print(f"(解析失败: {len(xml)} bytes)")
+        return []
+
     new_articles = []
-    
-    for article in articles[:max_articles * 2]:  # 多抓一些，过滤后保留需要的数量
-        if not article['title'] or not article['link']:
+    for art in articles:
+        if not art['title'] or len(art['title']) < 5:
             continue
-        
-        h = article_hash(article['title'], article['link'])
-        if h in seen_articles:
+        if not art['link'] and not key.startswith('arxiv'):
             continue
-        
-        article['journal'] = journal_info['name']
-        article['category'] = journal_info['category']
-        article['hash'] = h
-        article['crawled_at'] = datetime.now().isoformat()
-        
-        new_articles.append(article)
-        seen_articles[h] = {
-            'title': article['title'],
-            'crawled_at': article['crawled_at']
+
+        h = article_hash(art['title'], art['link'])
+        if h in seen:
+            continue
+
+        art['source'] = info['name']
+        art['domain'] = info['domain']
+        art['category'] = info['category']
+        art['hash'] = h
+        art['crawled_at'] = datetime.now().isoformat()
+
+        new_articles.append(art)
+        seen[h] = {
+            'title': art['title'],
+            'crawled_at': art['crawled_at']
         }
-        
-        if len(new_articles) >= max_articles:
+
+        if len(new_articles) >= max_n:
             break
-    
-    print(f"  发现 {len(new_articles)} 篇新文章")
+
+    print(f"({len(new_articles)} 新)")
     return new_articles
 
 
-def crawl_all_journals(max_per_journal=3):
-    """抓取所有期刊的最新文章"""
+def crawl_all(max_per_source=2):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    seen_articles = load_seen_articles()
-    
+    seen = load_seen()
+
+    print(f"[{datetime.now():%Y-%m-%d %H:%M}] 蒙多 AI+安全 情报扫描启动\n")
+
     all_articles = []
-    
-    for key, info in JOURNAL_FEEDS.items():
-        articles = crawl_journal(key, info, seen_articles, max_per_journal)
-        all_articles.extend(articles)
-    
-    # 保存已见文章记录（保留最近30天）
+    for key, info in FEEDS.items():
+        try:
+            arts = crawl_feed(key, info, seen, max_per_source)
+            all_articles.extend(arts)
+        except Exception as e:
+            print(f"    ⨯ ERROR: {e}")
+
+    # 清理30天前记录
     cutoff = (datetime.now() - timedelta(days=30)).isoformat()
-    seen_articles = {
-        k: v for k, v in seen_articles.items()
-        if v.get('crawled_at', '') > cutoff
-    }
-    save_seen_articles(seen_articles)
-    
-    # 保存本次抓取结果
+    seen = {k: v for k, v in seen.items() if v.get('crawled_at', '') > cutoff}
+    save_seen(seen)
+
+    # 汇总
+    ai_n = sum(1 for a in all_articles if a['domain'] == 'ai')
+    sec_n = sum(1 for a in all_articles if a['domain'] == 'security')
+
+    print(f"\n{'=' * 50}")
+    print(f"扫描完成: {len(all_articles)} 条新情报 (🤖 AI: {ai_n} | 🔒 安全: {sec_n})")
+
+    # 保存缓存
     if all_articles:
-        output_file = OUTPUT_DIR / f"articles_{datetime.now().strftime('%Y%m%d')}.json"
-        with open(output_file, 'w', encoding='utf-8') as f:
+        fname = OUTPUT_DIR / f"articles_{datetime.now().strftime('%Y%m%d')}.json"
+        with open(fname, 'w', encoding='utf-8') as f:
             json.dump(all_articles, f, ensure_ascii=False, indent=2)
-        print(f"\n共抓取 {len(all_articles)} 篇新文章，保存到 {output_file}")
-    
+        print(f"缓存已保存: {fname}")
+
     return all_articles
 
 
 if __name__ == '__main__':
-    max_per = int(sys.argv[1]) if len(sys.argv) > 1 else 3
-    articles = crawl_all_journals(max_per)
-    
-    # 输出JSON供下游使用
-    print(json.dumps({
-        'total': len(articles),
-        'articles': articles
-    }, ensure_ascii=False))
+    max_per = int(sys.argv[1]) if len(sys.argv) > 1 else 2
+    articles = crawl_all(max_per)
+
+    # 输出 JSON 供下游（修复 UnicodeEncodeError）
+    result = json.dumps({'total': len(articles)}, ensure_ascii=False)
+    try:
+        print(result)
+    except UnicodeEncodeError:
+        print(result.encode('utf-8', errors='replace').decode('utf-8', errors='replace'))
