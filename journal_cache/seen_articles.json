@@ -186,5 +186,101 @@
   "46b8be54a08171ea": {
     "title": "Bypassing Administrator Protection by Abusing UI Access",
     "crawled_at": "2026-06-10T22:01:47.599509"
+  },
+  "9dfd72a350071242": {
+    "title": "Exploratory Responsiveness and Adaptive Rigidity under AI-Assisted Optimization",
+    "crawled_at": "2026-06-11T06:00:04.535194"
+  },
+  "ad2b34aefb8fe944": {
+    "title": "Predictive Assistance and the Temporal Dynamics of Exploratory Compression",
+    "crawled_at": "2026-06-11T06:00:04.535194"
+  },
+  "b9742398d9e46cbc": {
+    "title": "From Senses to Decisions: The Information Flow of Auditory and Visual Perception in Multimodal LLMs",
+    "crawled_at": "2026-06-11T06:00:04.535194"
+  },
+  "180a2b85fb0b2135": {
+    "title": "Bypassing Copyright Protection in Diffusion-based Customization via Two-Stage Latent Feature Optimization",
+    "crawled_at": "2026-06-11T06:00:05.054046"
+  },
+  "9d5e955206b88a88": {
+    "title": "GitInject: Real-World Prompt Injection Attacks in AI-Powered CI/CD Pipelines",
+    "crawled_at": "2026-06-11T06:00:05.054046"
+  },
+  "397569205ffb9264": {
+    "title": "The Chronicles of Radio Frequency Fingerprinting",
+    "crawled_at": "2026-06-11T06:00:05.054046"
+  },
+  "9bcac375222c8170": {
+    "title": "Jun 8, 2026SciencePaving the way for agents in biology",
+    "crawled_at": "2026-06-11T06:00:05.713172"
+  },
+  "d5963618576c6698": {
+    "title": "Jun 5, 2026ScienceMaking Claude a chemist",
+    "crawled_at": "2026-06-11T06:00:05.713172"
+  },
+  "7e6ce0451a8a819a": {
+    "title": "May 27, 2026Economic ResearchCoding agents in the social sciences",
+    "crawled_at": "2026-06-11T06:00:05.713172"
+  },
+  "bf1492d0a8af40a4": {
+    "title": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
+    "crawled_at": "2026-06-11T06:00:06.451203"
+  },
+  "a7438fee8dd35d2b": {
+    "title": "Migrating Your GitHub CI to Hugging Face Jobs",
+    "crawled_at": "2026-06-11T06:00:06.451203"
+  },
+  "d228e43a8fb7e8dc": {
+    "title": "The Open Source Community is backing OpenEnv for Agentic RL",
+    "crawled_at": "2026-06-11T06:00:06.451203"
+  },
+  "bccb74161ac26705": {
+    "title": "PRC-linked influence operations are targeting AI debates in the US",
+    "crawled_at": "2026-06-11T06:00:12.664575"
+  },
+  "b4525c901920bb33": {
+    "title": "What Codex unlocks for Notion",
+    "crawled_at": "2026-06-11T06:00:12.664575"
+  },
+  "ff5cd59c869ab064": {
+    "title": "Industrial policy for the Intelligence Age",
+    "crawled_at": "2026-06-11T06:00:12.664575"
+  },
+  "744352709ba45217": {
+    "title": "China-Linked JDY Botnet Expands to 1,500+ Devices for Cyber Reconnaissance",
+    "crawled_at": "2026-06-11T06:00:14.335095"
+  },
+  "1836f51d2312deae": {
+    "title": "Ivanti, Fortinet, and SAP Release Patches for Multiple Critical Vulnerabilities",
+    "crawled_at": "2026-06-11T06:00:14.335095"
+  },
+  "18292691f1fa7cf1": {
+    "title": "Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RCE",
+    "crawled_at": "2026-06-11T06:00:14.335095"
+  },
+  "ea3e023a10575eb6": {
+    "title": "Who Runs the Ransomware Group ‘The Gentlemen?’",
+    "crawled_at": "2026-06-11T06:00:14.818716"
+  },
+  "d64ac0d54d39eb74": {
+    "title": "Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks",
+    "crawled_at": "2026-06-11T06:00:14.818716"
+  },
+  "8418a74af9127e33": {
+    "title": "Lawmakers Demand Answers as CISA Tries to Contain Data Leak",
+    "crawled_at": "2026-06-11T06:00:14.818716"
+  },
+  "306152b25415276b": {
+    "title": "Breaking the Sound Barrier, Part II: Exploiting CVE-2024-54529",
+    "crawled_at": "2026-06-11T06:00:21.870144"
+  },
+  "196755a4fe10d87f": {
+    "title": "Bypassing Windows Administrator Protection",
+    "crawled_at": "2026-06-11T06:00:21.870144"
+  },
+  "e56a8b982d8635b5": {
+    "title": "A 0-click exploit chain for the Pixel 9 Part 3: Where do we go from here?",
+    "crawled_at": "2026-06-11T06:00:21.870144"
   }
 }
