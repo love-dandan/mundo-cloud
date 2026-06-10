@@ -23,115 +23,115 @@ category: learning
 
 #### arXiv cs.AI
 
-1. **Exploratory Responsiveness and Adaptive Rigidity under AI-Assisted Optimization**
-   > arXiv:2606.10086v1 Announce Type: new Abstract: This paper develops a theory of exploratory adaptation under AI-assisted optimization. The central argument is that the long-run adaptive effects of AI ...
-   [阅读原文](https://arxiv.org/abs/2606.10086)
+1. **Less Context, Better Agents: Efficient Context Engineering for Long-Horizon Tool-Using LLM Agents**
+   > arXiv:2606.10209v1 Announce Type: new Abstract: Large language models deployed as autonomous agents for enterprise workflows face a key challenge: verbose tool responses from enterprise systems can ca...
+   [阅读原文](https://arxiv.org/abs/2606.10209)
 
-2. **Predictive Assistance and the Temporal Dynamics of Exploratory Compression**
-   > arXiv:2606.10094v1 Announce Type: new Abstract: Classical theories of cognition describe problem solving as exploratory search through structured problem spaces in which repeated interaction gradually...
-   [阅读原文](https://arxiv.org/abs/2606.10094)
+2. **Minimalist Genetic Programming**
+   > arXiv:2606.10237v1 Announce Type: new Abstract: Genetic programming (GP) is based on two important insights. First, that any learning task can fundamentally be posed as a program induction problem, wh...
+   [阅读原文](https://arxiv.org/abs/2606.10237)
 
-3. **From Senses to Decisions: The Information Flow of Auditory and Visual Perception in Multimodal LLMs**
-   > arXiv:2606.10147v1 Announce Type: new Abstract: Multimodal Large Language Models (MLLMs) can listen and see, but how do audio and visual signals actually travel through the network to shape an answer?...
-   [阅读原文](https://arxiv.org/abs/2606.10147)
+3. **Regimes: An Auditable, Held-Out-Gated Improvement Loop Demonstrated on LongMemEval with ActiveGraph**
+   > arXiv:2606.10241v1 Announce Type: new Abstract: Autonomous improvement loops are hard to trust because the improvement process is usually external scaffolding bolted onto the agent: failures go unlogg...
+   [阅读原文](https://arxiv.org/abs/2606.10241)
 
 #### Anthropic Research
 
-1. **Jun 8, 2026SciencePaving the way for agents in biology**
-   > Jun 8, 2026SciencePaving the way for agents in biology
-   [阅读原文](https://www.anthropic.com/research/agents-in-biology)
+1. **May 22, 2026AnnouncementsProject Glasswing: An initial update**
+   > May 22, 2026AnnouncementsProject Glasswing: An initial update
+   [阅读原文](https://www.anthropic.com/research/glasswing-initial-update)
 
-2. **Jun 5, 2026ScienceMaking Claude a chemist**
-   > Jun 5, 2026ScienceMaking Claude a chemist
-   [阅读原文](https://www.anthropic.com/research/making-claude-a-chemist)
+2. **May 14, 2026Policy2028: Two scenarios for global AI leadership**
+   > May 14, 2026Policy2028: Two scenarios for global AI leadership
+   [阅读原文](https://www.anthropic.com/research/2028-ai-leadership)
 
-3. **May 27, 2026Economic ResearchCoding agents in the social sciences**
-   > May 27, 2026Economic ResearchCoding agents in the social sciences
-   [阅读原文](https://www.anthropic.com/research/coding-agents-social-sciences)
+3. **AlignmentMay 8, 2026Teaching Claude whyNew research on how we've reduced agentic misalignment.**
+   > AlignmentMay 8, 2026Teaching Claude whyNew research on how we've reduced agentic misalignment.
+   [阅读原文](https://www.anthropic.com/research/teaching-claude-why)
 
 #### Hugging Face Blog
 
-1. **How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces**
-   [阅读原文](https://huggingface.co/blog/mishig/spaces-agents-md)
+1. **Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI**
+   [阅读原文](https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety)
 
-2. **Migrating Your GitHub CI to Hugging Face Jobs**
-   [阅读原文](https://huggingface.co/blog/github-ci-hf-jobs)
+2. **Designing the hf CLI as an agent-optimized way to work with the Hub**
+   [阅读原文](https://huggingface.co/blog/hf-cli-for-agents)
 
-3. **The Open Source Community is backing OpenEnv for Agentic RL**
-   [阅读原文](https://huggingface.co/blog/openenv-agentic-rl)
+3. **Direct Preference Optimization Beyond Chatbots**
+   [阅读原文](https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots)
 
 #### OpenAI Blog
 
-1. **PRC-linked influence operations are targeting AI debates in the US**
-   > A new report from OpenAI details PRC-linked influence operations using AI to target U.S. tech debates, data center narratives, tariffs, and false claims about ChatGPT.
-   [阅读原文](https://openai.com/index/prc-linked-influence-operations-ai-debates)
+1. **How an astrophysicist uses Codex to help simulate black holes**
+   > Discover how astrophysicist Chi-kwan Chan uses Codex to build black hole simulations, helping scientists study extreme physics and test Einstein’s theory of general relativity.
+   [阅读原文](https://openai.com/index/using-codex-to-simulate-black-holes)
 
-2. **What Codex unlocks for Notion**
-   > How Notion uses Codex to one-shot specs, build AI Voice Input for the web, and multiply engineering power across small teams.
-   [阅读原文](https://openai.com/index/notion)
+2. **Access OpenAI models and Codex through your Oracle cloud commitment**
+   > Access OpenAI models and Codex through Oracle Cloud, using existing commitments to build and deploy AI with enterprise security and governance.
+   [阅读原文](https://openai.com/index/openai-on-oracle-cloud)
 
-3. **Industrial policy for the Intelligence Age**
-   > Explore our ambitious, people-first industrial policy ideas for the AI era—focused on expanding opportunity, sharing prosperity, and building resilient institutions as advanced intelligence evolves.
-   [阅读原文](https://openai.com/index/industrial-policy-for-the-intelligence-age)
+3. **Confidential submission of draft S-1 to the SEC**
+   > OpenAI confirms a confidential S-1 submission to the SEC and has not yet determined timing for further action.
+   [阅读原文](https://openai.com/index/openai-submits-confidential-s-1)
 
 
 ### 🔒 SECURITY
 
 #### arXiv cs.CR (密码学与安全)
 
-1. **Bypassing Copyright Protection in Diffusion-based Customization via Two-Stage Latent Feature Optimization**
-   > arXiv:2606.09909v1 Announce Type: new Abstract: With the growing concerns over copyright infringement in diffusion-based customization, adversarial attacks have emerged as a prominent defense strategy...
-   [阅读原文](https://arxiv.org/abs/2606.09909)
+1. **The Human Vulnerabilities & Exploits (HVE) Framework**
+   > arXiv:2606.10083v1 Announce Type: new Abstract: The cybersecurity community has invested over two decades in building standardized frameworks, the Common Vulnerabilities and Exposures (CVE) system, th...
+   [阅读原文](https://arxiv.org/abs/2606.10083)
 
-2. **GitInject: Real-World Prompt Injection Attacks in AI-Powered CI/CD Pipelines**
-   > arXiv:2606.09935v1 Announce Type: new Abstract: AI-powered agents are increasingly embedded in continuous integration and continuous delivery/deployment (CI/CD) pipelines to autonomously review pull r...
-   [阅读原文](https://arxiv.org/abs/2606.09935)
+2. **SoK: Colluding Adversaries in Machine Learning Pipelines**
+   > arXiv:2606.10091v1 Announce Type: new Abstract: Machine learning (ML) models are susceptible to various security, privacy, and fairness risks. Adversaries with different characteristics (i.e., objecti...
+   [阅读原文](https://arxiv.org/abs/2606.10091)
 
-3. **The Chronicles of Radio Frequency Fingerprinting**
-   > arXiv:2606.10031v1 Announce Type: new Abstract: Radio Frequency Fingerprinting (RFF) has evolved from an early idea for radar emitter identification into a broad research field for wireless device ide...
-   [阅读原文](https://arxiv.org/abs/2606.10031)
+3. **Secrets Best Not Shared: DNS Privacy Enhancements for the Constrained IoT**
+   > arXiv:2606.10097v1 Announce Type: new Abstract: Attackers often identify DNS traffic to disrupt or compromise Internet services. While prior work has focused on encrypting queries using DNS over TLS, ...
+   [阅读原文](https://arxiv.org/abs/2606.10097)
 
 #### The Hacker News
 
-1. **China-Linked JDY Botnet Expands to 1,500+ Devices for Cyber Reconnaissance**
-   > Cybersecurity researchers have warned of a "resurgence and expansion" of JDY, a covert network associated with China-nexus state-sponsored threat actors. "The JDY botnet comprises over 1,500 SOHO [sma...
-   [阅读原文](https://thehackernews.com/2026/06/china-linked-jdy-botnet-expands-to-1500.html)
+1. **CISA Adds Cisco, Chrome, and Arista Flaws to KEV Catalog Amid Active Exploitation**
+   > The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitati...
+   [阅读原文](https://thehackernews.com/2026/06/cisa-adds-cisco-chrome-and-arista-flaws.html)
 
-2. **Ivanti, Fortinet, and SAP Release Patches for Multiple Critical Vulnerabilities**
-   > Fortinet, Ivanti, and SAP have released security updates to address multiple critical security vulnerabilities that could result in arbitrary code execution and information disclosure. The security fl...
-   [阅读原文](https://thehackernews.com/2026/06/ivanti-fortinet-and-sap-release-patches.html)
+2. **Anthropic Releases Claude Fable 5, Its Most Powerful AI Yet, With Cyber Safeguards**
+   > On June 9, Anthropic released Claude Fable 5, the most capable model it has ever made, generally available. It also did something unusual: it shipped one model as two products, split not by capability...
+   [阅读原文](https://thehackernews.com/2026/06/anthropic-releases-claude-fable-5-its.html)
 
-3. **Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RCE**
-   > A high-severity unpatched security flaw in Langflow, an open-source low-code platform to build artificial intelligence (AI) applications, has come under active exploitation in the wild, according to f...
-   [阅读原文](https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html)
+3. **ServiceNow Flaw Exploited to Gain Unauthorized Access to Customer Instances**
+   > ServiceNow has warned about a security incident in which unknown threat actors exploited a flaw to obtain deeper unauthorized access to susceptible instances. "On June 5, 2026, ServiceNow applied a se...
+   [阅读原文](https://thehackernews.com/2026/06/servicenow-flaw-exploited-to-gain.html)
 
 #### Krebs on Security
 
-1. **Who Runs the Ransomware Group ‘The Gentlemen?’**
-   > A cybercrime group known as The Gentlemen has emerged as the second most active ransomware gang by victim count, rapidly attracting a talented pool of hackers through an aggressive recruitment strateg...
-   [阅读原文](https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/)
+1. **Alleged Kimwolf Botmaster ‘Dort’ Arrested, Charged in U.S. and Canada**
+   > Canadian authorities on Wednesday arrested a 23-year-old Ottawa man on suspicion of building and operating Kimwolf, a fast spreading Internet-of-Things botnet that enslaved millions of devices for use...
+   [阅读原文](https://krebsonsecurity.com/2026/05/alleged-kimwolf-botmaster-dort-arrested-charged-in-u-s-and-canada/)
 
-2. **Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks**
-   > Authorities in the Netherlands have arrested the co-owners of two related Internet hosting companies for operating IT infrastructure used by Russia to carry out cyberattacks, influence operations and ...
-   [阅读原文](https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/)
+2. **CISA Admin Leaked AWS GovCloud Keys on Github**
+   > Until this past weekend, a contractor for the Cybersecurity &#038; Infrastructure Security Agency (CISA) maintained a public GitHub repository that exposed credentials to several highly privileged AWS...
+   [阅读原文](https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/)
 
-3. **Lawmakers Demand Answers as CISA Tries to Contain Data Leak**
-   > Lawmakers in both houses of Congress are demanding answers from the U.S. Cybersecurity &#038; Infrastructure Security Agency (CISA) after KrebsOnSecurity reported this week that a CISA contractor inte...
-   [阅读原文](https://krebsonsecurity.com/2026/05/lawmakers-demand-answers-as-cisa-tries-to-contain-data-leak/)
+3. **Patch Tuesday, May 2026 Edition**
+   > Artificial intelligence platforms may be just as susceptible to social engineering as human beings, but they are proving remarkably good at finding security vulnerabilities in human-made computer code...
+   [阅读原文](https://krebsonsecurity.com/2026/05/patch-tuesday-may-2026-edition/)
 
 #### Google Project Zero
 
-1. **Breaking the Sound Barrier, Part II: Exploiting CVE-2024-54529**
-   > In the first part of this series, I detailed my journey into macOS security research, which led to the discovery of a type confusion vulnerability (CVE-2024-54529) and a double-free vulnerability (CVE...
-   [阅读原文](https://projectzero.google/2026/01/sound-barrier-2.html)
+1. **A 0-click exploit chain for the Pixel 9 Part 2: Cracking the Sandbox with a Big Wave**
+   > With the advent of a potential Dolby Unified Decoder RCE exploit, it seemed prudent to see what kind of Linux kernel drivers might be accessible from the resulting userland context, the mediacodec con...
+   [阅读原文](https://projectzero.google/2026/01/pixel-0-click-part-2.html)
 
-2. **Bypassing Windows Administrator Protection**
-   > A headline feature introduced in the latest release of Windows 11, 25H2 is Administrator Protection. The goal of this feature is to replace User Account Control (UAC) with a more robust and importantl...
-   [阅读原文](https://projectzero.google/2026/26/windows-administrator-protection.html)
+2. **A 0-click exploit chain for the Pixel 9 Part 1: Decoding Dolby**
+   > Over the past few years, several AI-powered features have been added to mobile phones that allow users to better search and understand their messages. One effect of this change is increased 0-click at...
+   [阅读原文](https://projectzero.google/2026/01/pixel-0-click-part-1.html)
 
-3. **A 0-click exploit chain for the Pixel 9 Part 3: Where do we go from here?**
-   > While our previous two blog posts provided technical recommendations for increasing the effort required by attackers to develop 0-click exploit chains, our experience finding, reporting and exploiting...
-   [阅读原文](https://projectzero.google/2026/01/pixel-0-click-part-3.html)
+3. **Welcome to the new Project Zero Blog**
+   > While on Project Zero, we aim for our research to be leading-edge, our blog design was â¦ not so much. We welcome readers to our shiny new blog! For the occasion, we asked members of Project Zero to ...
+   [阅读原文](https://projectzero.google/2025/12/welcome.html)
 
 
 ---
