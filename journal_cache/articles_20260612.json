@@ -1,0 +1,156 @@
+[
+  {
+    "title": "From Explicit Elements to Implicit Intent: A Predefined Library for Auditable Behavioral Inference",
+    "link": "https://arxiv.org/abs/2606.11207",
+    "summary": "arXiv:2606.11207v1 Announce Type: new Abstract: We present SemantiClean, a modular framework for extracting structured semantic signals from e-commerce session data and driving pluggable inference targets including purchase intent, customer segmentation, and product affinity through a shared element library. Unlike conventional end-to-end predictors that optimise solely for accuracy, SemantiClean prioritises auditability, structural governance, and sigma=0 reproducibility, explicitly trading marginal predictive gains for element-level transparency and defensible decision trails. Built upon the Online Shoppers Purchasing Intention (OSPI) dataset, the framework organises twenty-four behavioural elements into a four-layer architecture (Functional, Interaction, Systemic, Contextual) and enforc",
+    "published": "Thu, 11 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "f63bbb446147ad01",
+    "crawled_at": "2026-06-12T06:00:47.005387"
+  },
+  {
+    "title": "Position: Hippocampal Explicit Memory Is the Cornerstone for AGI",
+    "link": "https://arxiv.org/abs/2606.11245",
+    "summary": "arXiv:2606.11245v1 Announce Type: new Abstract: Large Language Models (LLMs) have demonstrated remarkable capabilities across various tasks, raising expectations for Artificial General Intelligence (AGI). This position paper argues that integrating explicit memory is the cornerstone for advancing LLMs toward AGI. The key reason is that the underlying learning mechanism of LLMs is highly analogous to human implicit memory. However, higher-order cognitive functions necessary for AGI, such as long-term strategic planning, metacognition, and symbolic reasoning, heavily rely on hippocampal explicit memory and cannot arise solely from implicit statistical learning. Drawing on findings from neuroscience, I advance this perspective and complement it with computational requirements for artificial e",
+    "published": "Thu, 11 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "cec74531fa412c30",
+    "crawled_at": "2026-06-12T06:00:47.005387"
+  },
+  {
+    "title": "Can AI Agents Synthesize Scientific Conclusions?",
+    "link": "https://arxiv.org/abs/2606.11337",
+    "summary": "arXiv:2606.11337v1 Announce Type: new Abstract: Scientific AI agents increasingly retrieve evidence, reason across sources, and synthesize conclusions used in consequential decisions. Yet, their ability to do so in high-stakes domains such as health remains unclear. We introduce SciConBench, a large-scale live benchmark of 9.11K questions and expert-written conclusions from systematic reviews to evaluate open-domain scientific conclusion synthesis. The benchmark draws on an expert-validated automated evaluation pipeline that decomposes conclusions into atomic facts and measures correctness and comprehensiveness via factual precision and recall. To mitigate data leakage, we further introduce SciConHarness, a clean-room evaluation harness that equips agents with controlled web interaction to",
+    "published": "Thu, 11 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "5366b20bc244c6e6",
+    "crawled_at": "2026-06-12T06:00:47.005387"
+  },
+  {
+    "title": "When Poison Fails After Retrieval: Revisiting Corpus Poisoning under Chunking and Reranking Pipelines",
+    "link": "https://arxiv.org/abs/2606.11265",
+    "summary": "arXiv:2606.11265v1 Announce Type: new Abstract: Retrieval-Augmented Generation (RAG) systems are vulnerable to corpus poisoning attacks that manipulate downstream model outputs through malicious knowledge injection. Existing studies mainly evaluate poisoning under simplified retrieval settings, overlooking practical RAG pipelines involving document chunking, dense retrieval, reranking, and grounded generation. In this paper, we revisit corpus poisoning under realistic multi-stage retrieval pipelines and show that many existing attacks substantially degrade after reranking despite achieving high retrieval-stage relevance. We identify retrieval granularity mismatch as a key reason for this failure: document-level adversarial signals are often fragmented during chunking, while rerankers favor",
+    "published": "Thu, 11 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "456e8be75d978bb3",
+    "crawled_at": "2026-06-12T06:01:16.434141"
+  },
+  {
+    "title": "MPC-Patch-Bench: Security-Aware LLM Code Patch for Multi-Party Computation",
+    "link": "https://arxiv.org/abs/2606.11416",
+    "summary": "arXiv:2606.11416v1 Announce Type: new Abstract: Repository-level benchmarks for evaluating Large Language Model (LLM) code repair on Secure Multi-Party Computation (MPC) software do not yet exist, and directly transplanting general-purpose benchmarks such as SWE-bench fails on three structural fronts: (i) MPC repositories are dominated by generic Python infrastructure rather than cryptographic logic; (ii) high-value MPC fixes lack the standardized tests rigid extraction pipelines require; and (iii) standard fail-to-pass evaluation is insufficient for code that must also be cryptographically safe. MPC is increasingly deployed for privacy-preserving machine learning, biomedical collaboration, and secure analytics. Existing MPC-specific code-synthesis efforts cover only operator-level or sing",
+    "published": "Thu, 11 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "757785094dfa92c9",
+    "crawled_at": "2026-06-12T06:01:16.434141"
+  },
+  {
+    "title": "JailbreakOPT: Tool-Assisted Iterative Jailbreak Prompt Optimization",
+    "link": "https://arxiv.org/abs/2606.11425",
+    "summary": "arXiv:2606.11425v1 Announce Type: new Abstract: Jailbreak attacks expose persistent safety weaknesses in large language models (LLMs), but existing stateless single-turn methods face a trade-off: hand-crafted prompts are expressive but static, while iterative prompt optimization can adapt but often relies on low-level mutations that require many target queries. We propose JailbreakOPT, a tool-assisted framework for improving iterative single-turn jailbreak prompt optimization. JailbreakOPT organizes diverse atomic jailbreak prompts into an attack tool library and composes them through a unified intra-episode optimization abstraction to generate stronger standalone attack prompts. To reuse experience across attack episodes, JailbreakOPT further frames tool selection as a contextual bandit p",
+    "published": "Thu, 11 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "2478e1507a9714df",
+    "crawled_at": "2026-06-12T06:01:16.434141"
+  },
+  {
+    "title": "May 7, 2026PolicyFocus areas for The Anthropic Institute",
+    "link": "https://www.anthropic.com/research/anthropic-institute-agenda",
+    "summary": "May 7, 2026PolicyFocus areas for The Anthropic Institute",
+    "published": "Thu, 07 May 2026 00:00:00 +0000",
+    "source": "Anthropic Research",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "c93848e371651d21",
+    "crawled_at": "2026-06-12T06:01:19.128534"
+  },
+  {
+    "title": "May 7, 2026AlignmentDonating our open-source alignment tool",
+    "link": "https://www.anthropic.com/research/donating-open-source-petri",
+    "summary": "May 7, 2026AlignmentDonating our open-source alignment tool",
+    "published": "Thu, 07 May 2026 00:00:00 +0000",
+    "source": "Anthropic Research",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "416a7c89eb79bbb1",
+    "crawled_at": "2026-06-12T06:01:19.128534"
+  },
+  {
+    "title": "Natural Language Autoencoders: Turning Claude’s thoughts into text",
+    "link": "https://www.anthropic.com/research/natural-language-autoencoders",
+    "summary": "Natural Language Autoencoders: Turning Claude’s thoughts into text",
+    "published": "Thu, 07 May 2026 00:00:00 +0000",
+    "source": "Anthropic Research",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "196c6d2d5391349e",
+    "crawled_at": "2026-06-12T06:01:19.128534"
+  },
+  {
+    "title": "OpenAI to acquire Ona",
+    "link": "https://openai.com/index/openai-to-acquire-ona",
+    "summary": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
+    "published": "Thu, 11 Jun 2026 00:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "a4ad1c230b9c208b",
+    "crawled_at": "2026-06-12T06:02:00.138784"
+  },
+  {
+    "title": "Supporting Europe’s work in ensuring a trustworthy AI ecosystem",
+    "link": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem",
+    "summary": "OpenAI supports the EU Code of Practice on AI content transparency, advancing provenance standards and tools to help people understand AI-generated content.",
+    "published": "Thu, 11 Jun 2026 00:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "36709af90455057c",
+    "crawled_at": "2026-06-12T06:02:00.138784"
+  },
+  {
+    "title": "BBVA puts AI at the core of banking with OpenAI",
+    "link": "https://openai.com/index/bbva",
+    "summary": "Learn how BBVA scaled ChatGPT Enterprise to 100,000 employees and partnered with OpenAI to accelerate AI-powered banking transformation worldwide.",
+    "published": "Thu, 11 Jun 2026 00:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "3ea5cca7ad631caa",
+    "crawled_at": "2026-06-12T06:02:00.138784"
+  },
+  {
+    "title": "Canvas Breach Disrupts Schools & Colleges Nationwide",
+    "link": "https://krebsonsecurity.com/2026/05/canvas-breach-disrupts-schools-colleges-nationwide/",
+    "summary": "An ongoing data extortion attack targeting the widely-used education technology platform Canvas disrupted classes and coursework at school districts and universities across the United States today, after a cybercrime group defaced the service's login page with a ransom demand that threatened to leak data from 275 million students and faculty across nearly 9,000 educational institutions.",
+    "published": "Fri, 08 May 2026 02:58:46 +0000",
+    "source": "Krebs on Security",
+    "domain": "security",
+    "category": "investigation",
+    "hash": "e5a60e25530878ce",
+    "crawled_at": "2026-06-12T06:03:27.895905"
+  },
+  {
+    "title": "Anti-DDoS Firm Heaped Attacks on Brazilian ISPs",
+    "link": "https://krebsonsecurity.com/2026/04/anti-ddos-firm-heaped-attacks-on-brazilian-isps/",
+    "summary": "A Brazilian tech firm that specializes in protecting networks from distributed denial-of-service (DDoS) attacks has been enabling a botnet responsible for an extended campaign of massive DDoS attacks against other network operators in Brazil, KrebsOnSecurity has learned. The firm's chief executive says the malicious activity resulted from a security breach and was likely the work of a competitor trying to tarnish his company's public image.",
+    "published": "Thu, 30 Apr 2026 14:04:26 +0000",
+    "source": "Krebs on Security",
+    "domain": "security",
+    "category": "investigation",
+    "hash": "8716a722caf597f6",
+    "crawled_at": "2026-06-12T06:03:27.895905"
+  }
+]

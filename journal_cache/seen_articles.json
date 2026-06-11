@@ -378,5 +378,61 @@
   "28f8fa57a51ca0ca": {
     "title": "Welcome to the new Project Zero Blog",
     "crawled_at": "2026-06-11T06:27:15.842186"
+  },
+  "f63bbb446147ad01": {
+    "title": "From Explicit Elements to Implicit Intent: A Predefined Library for Auditable Behavioral Inference",
+    "crawled_at": "2026-06-12T06:00:47.005387"
+  },
+  "cec74531fa412c30": {
+    "title": "Position: Hippocampal Explicit Memory Is the Cornerstone for AGI",
+    "crawled_at": "2026-06-12T06:00:47.005387"
+  },
+  "5366b20bc244c6e6": {
+    "title": "Can AI Agents Synthesize Scientific Conclusions?",
+    "crawled_at": "2026-06-12T06:00:47.005387"
+  },
+  "456e8be75d978bb3": {
+    "title": "When Poison Fails After Retrieval: Revisiting Corpus Poisoning under Chunking and Reranking Pipelines",
+    "crawled_at": "2026-06-12T06:01:16.434141"
+  },
+  "757785094dfa92c9": {
+    "title": "MPC-Patch-Bench: Security-Aware LLM Code Patch for Multi-Party Computation",
+    "crawled_at": "2026-06-12T06:01:16.434141"
+  },
+  "2478e1507a9714df": {
+    "title": "JailbreakOPT: Tool-Assisted Iterative Jailbreak Prompt Optimization",
+    "crawled_at": "2026-06-12T06:01:16.434141"
+  },
+  "c93848e371651d21": {
+    "title": "May 7, 2026PolicyFocus areas for The Anthropic Institute",
+    "crawled_at": "2026-06-12T06:01:19.128534"
+  },
+  "416a7c89eb79bbb1": {
+    "title": "May 7, 2026AlignmentDonating our open-source alignment tool",
+    "crawled_at": "2026-06-12T06:01:19.128534"
+  },
+  "196c6d2d5391349e": {
+    "title": "Natural Language Autoencoders: Turning Claude’s thoughts into text",
+    "crawled_at": "2026-06-12T06:01:19.128534"
+  },
+  "a4ad1c230b9c208b": {
+    "title": "OpenAI to acquire Ona",
+    "crawled_at": "2026-06-12T06:02:00.138784"
+  },
+  "36709af90455057c": {
+    "title": "Supporting Europe’s work in ensuring a trustworthy AI ecosystem",
+    "crawled_at": "2026-06-12T06:02:00.138784"
+  },
+  "3ea5cca7ad631caa": {
+    "title": "BBVA puts AI at the core of banking with OpenAI",
+    "crawled_at": "2026-06-12T06:02:00.138784"
+  },
+  "e5a60e25530878ce": {
+    "title": "Canvas Breach Disrupts Schools & Colleges Nationwide",
+    "crawled_at": "2026-06-12T06:03:27.895905"
+  },
+  "8716a722caf597f6": {
+    "title": "Anti-DDoS Firm Heaped Attacks on Brazilian ISPs",
+    "crawled_at": "2026-06-12T06:03:27.895905"
   }
 }
