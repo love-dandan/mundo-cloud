@@ -542,5 +542,73 @@
   "a158d0731b84b7dd": {
     "title": "Dreaming: Better memory for a more helpful ChatGPT",
     "crawled_at": "2026-06-13T06:05:22.225096"
+  },
+  "48d0d5188a8204fe": {
+    "title": "Pythagoras-Prover: Advancing Efficient Formal Proving via Augmented Lean Formalisation",
+    "crawled_at": "2026-06-13T06:27:05.547903"
+  },
+  "921fad90a6394e5c": {
+    "title": "PersonaDrive: Human-Style Retrieval-Augmented VLA Agents for Closed-Loop Driving Simulation",
+    "crawled_at": "2026-06-13T06:27:05.547903"
+  },
+  "3912f02d1f4bdea2": {
+    "title": "\"Did you lie?\" Evaluating Lie Detectors across Model Scale and Belief-Verified Model Organisms",
+    "crawled_at": "2026-06-13T06:27:05.547903"
+  },
+  "f4738c9a8a6d0ebd": {
+    "title": "Amnesia: A Stealthy Replay Attack on Continual Learning Dreams",
+    "crawled_at": "2026-06-13T06:27:07.023977"
+  },
+  "316eb0302c428963": {
+    "title": "CAPED: Context-Aware Privacy Exposure Defense for Mobile GUI Agents",
+    "crawled_at": "2026-06-13T06:27:07.023977"
+  },
+  "ed5f43afd51ec1c6": {
+    "title": "SMSR: Certified Defence Against Runtime Memory Poisoning in Persistent LLM Agent Systems",
+    "crawled_at": "2026-06-13T06:27:07.023977"
+  },
+  "97d63b20ac680cd4": {
+    "title": "Alignment",
+    "crawled_at": "2026-06-13T06:27:07.818656"
+  },
+  "39b841524fa1ee01": {
+    "title": "Interpretability",
+    "crawled_at": "2026-06-13T06:27:07.818656"
+  },
+  "12dd6fbf31af2076": {
+    "title": "olmo-eval: An evaluation workbench for the model development loop",
+    "crawled_at": "2026-06-13T06:27:08.506840"
+  },
+  "9f44cc4e41053e43": {
+    "title": "Introducing Mellum2: A 12B Mixture-of-Experts Model by JetBrains",
+    "crawled_at": "2026-06-13T06:27:08.506840"
+  },
+  "2a3148b99023220a": {
+    "title": "Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic",
+    "crawled_at": "2026-06-13T06:27:08.506840"
+  },
+  "4cd4172cdd19affb": {
+    "title": "Biodefense in the Intelligence Age",
+    "crawled_at": "2026-06-13T06:27:09.631018"
+  },
+  "d9ff02c4310622f4": {
+    "title": "Introducing new capabilities to GPT-Rosalind",
+    "crawled_at": "2026-06-13T06:27:09.631018"
+  },
+  "297bc17ec6f337a8": {
+    "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+    "crawled_at": "2026-06-13T06:27:09.631018"
+  },
+  "f62e2548ec4a7c20": {
+    "title": "Over 400 Arch Linux AUR Packages Hijacked to Deploy Infostealer and eBPF Rootkit",
+    "crawled_at": "2026-06-13T06:27:11.384055"
+  },
+  "38d076870ad3d8bf": {
+    "title": "Google Sues Chinese Smishing Network Accused of Using Gemini AI in Phishing",
+    "crawled_at": "2026-06-13T06:27:11.384055"
+  },
+  "739685e2e3eeb8cf": {
+    "title": "China-Linked Hackers Backdoored Linux Login Software to Hide for Nearly a Decade",
+    "crawled_at": "2026-06-13T06:27:11.384055"
   }
 }

@@ -1,101 +1,189 @@
 [
   {
-    "title": "ToolSense: A Diagnostic Framework for Auditing Parametric Tool Knowledge in LLMs",
-    "link": "https://arxiv.org/abs/2606.12451",
-    "summary": "arXiv:2606.12451v1 Announce Type: new Abstract: Large language models deployed as agents over large tool catalogs face a critical tool-retrieval bottleneck. As embedding-based retrieval approaches rely on compact encoders that may under-capture specialized tool semantics, parametric tool retrieval addresses this by encoding each tool as a virtual token appended to the LLM vocabulary, fine-tuned in two stages (memorization then retrieval SFT) to use the LLM as a retriever, achieving strong performance on standard ToolBench retrieval benchmarks. Yet these benchmarks use verbose, fully-specified queries, and their evaluation applies constrained decoding that restricts outputs to valid token paths, neither reveals whether the model actually understands its tools. We introduce \\textbf{ToolSense",
+    "title": "Pythagoras-Prover: Advancing Efficient Formal Proving via Augmented Lean Formalisation",
+    "link": "https://arxiv.org/abs/2606.12594",
+    "summary": "arXiv:2606.12594v1 Announce Type: new Abstract: Modern Lean theorem provers achieve strong performance only with substantial training and inference compute, driven in part by scarce verified proof data and the long reasoning traces of formal proof search, making both supervised fine-tuning (SFT) and sampling expensive. We introduce Pythagoras-Prover, a compute-efficient open-source family of Lean theorem provers built for practical compute budgets. The family spans two generation paradigms: autoregressive models at 4B and 32B parameters, and a first proof-of-concept diffusion-based prover (4B) that iteratively refines Lean proofs at inference time. For training efficiency, we build a Lean-verified corpus stratified into easy, medium, and hard problems for curriculum SFT, so models acquire ",
     "published": "Fri, 12 Jun 2026 00:00:00 -0400",
     "source": "arXiv cs.AI",
     "domain": "ai",
     "category": "research",
-    "hash": "e66b44f97db54019",
-    "crawled_at": "2026-06-13T06:00:31.362988"
+    "hash": "48d0d5188a8204fe",
+    "crawled_at": "2026-06-13T06:27:05.547903"
   },
   {
-    "title": "Arbor: Tree Search as a Cognition Layer for Autonomous Agents",
-    "link": "https://arxiv.org/abs/2606.12563",
-    "summary": "arXiv:2606.12563v1 Announce Type: new Abstract: Arbor is a multi-agent framework that introduces structured tree search as a cognition layer for autonomous agents operating in large, stateful action spaces. Prior autonomous optimization systems operate on isolated targets with stateless evaluation. Arbor instead maintains an explicit search tree of scored hypotheses that serves as the shared working memory across agents, evolving with every measurement, treating failures as diagnostic signal that reshapes subsequent exploration, and expanding as prior successes shift the bottleneck distribution. We validate Arbor on full-stack LLM inference optimization, a domain where achieving peak performance has historically required coordinated effort from engineering teams across the application, fra",
+    "title": "PersonaDrive: Human-Style Retrieval-Augmented VLA Agents for Closed-Loop Driving Simulation",
+    "link": "https://arxiv.org/abs/2606.12616",
+    "summary": "arXiv:2606.12616v1 Announce Type: new Abstract: Closed-loop driving simulators typically populate their environments with non-ego traffic agents that behave largely the same way, produced either by rule-based traffic managers or by learned models trained toward a single behavioral mode. Recent work introduces style variation through post-hoc labels on observational data or LLM-inferred reward weights, but these signals act as proxies for what a style should reward rather than demonstrations of humans explicitly asked to drive in that style. We introduce PersonaDrive, a pipeline that conditions a vision-language-action (VLA) driving agent on retrieved demonstrations from a style-instructed human driving dataset, in which participants drive CARLA leaderboard routes under aggressive, neutral,",
     "published": "Fri, 12 Jun 2026 00:00:00 -0400",
     "source": "arXiv cs.AI",
     "domain": "ai",
     "category": "research",
-    "hash": "eb5bf66b7bf2d3c2",
-    "crawled_at": "2026-06-13T06:00:31.362988"
+    "hash": "921fad90a6394e5c",
+    "crawled_at": "2026-06-13T06:27:05.547903"
   },
   {
-    "title": "Strategic Decision Support for AI Agents",
-    "link": "https://arxiv.org/abs/2606.12587",
-    "summary": "arXiv:2606.12587v1 Announce Type: new Abstract: Traditionally, decision support studies how humans use machine learning models to make better decisions. In modern agentic systems, this division of roles is increasingly reversed: AI agents act on behalf of users, while humans and tools becomes support mechanisms around them. This role reversal brings reliability concerns to the forefront, since agentic errors can be consequential and agent behavior must remain aligned with human goals and constraints. Departing from the classical view of decision support, we revisit its two basic principles, the cost--value tradeoff of seeking support and the role of uncertainty quantification, in a setting where AI agents are the central actors. We propose a framework for strategic decision support for AI ",
+    "title": "\"Did you lie?\" Evaluating Lie Detectors across Model Scale and Belief-Verified Model Organisms",
+    "link": "https://arxiv.org/abs/2606.12618",
+    "summary": "arXiv:2606.12618v1 Announce Type: new Abstract: Robust lie detectors for language models could enable powerful techniques for auditing, monitoring, and post-hoc investigation of model behaviour, but evaluating them requires testbeds where models verifiably believe the opposite of what they say. We show that existing trained model organisms often fail this requirement, leaving prior positive and negative detection results difficult to interpret. We address this with 13 reasoning model organisms whose hidden beliefs are verified in chain-of-thought and shown to generalise to held-out tasks, alongside Varied Deception, a prompted-lying testbed covering a broad range of lie-inducing motivations. On these testbeds we evaluate four detectors: a chain-of-thought judge, a logprob classifier, and t",
     "published": "Fri, 12 Jun 2026 00:00:00 -0400",
     "source": "arXiv cs.AI",
     "domain": "ai",
     "category": "research",
-    "hash": "48db302f6c7877d1",
-    "crawled_at": "2026-06-13T06:00:31.362988"
+    "hash": "3912f02d1f4bdea2",
+    "crawled_at": "2026-06-13T06:27:05.547903"
   },
   {
-    "title": "Influence Factors on RAG Poisoning",
-    "link": "https://arxiv.org/abs/2606.12469",
-    "summary": "arXiv:2606.12469v1 Announce Type: new Abstract: Retrieval-Augmented Generation (RAG) systems enhance large language models by grounding responses in retrieved documents from external knowledge sources at inference time. However, this reliance on retrieved content introduces vulnerabilities to poisoning attacks, in which adversarial documents can manipulate both the retrieval process and the generated outputs. This paper investigates poisoning robustness in RAG through a full factorial experimental study covering 432 configurations. We analyze the impacts of dataset, retriever type, retrieval depth, database composition, chunking strategy, and generator model on retrieval-level and generation-level metrics. The results show that retriever architecture, dataset, and retrieval depth are the s",
+    "title": "Amnesia: A Stealthy Replay Attack on Continual Learning Dreams",
+    "link": "https://arxiv.org/abs/2606.12655",
+    "summary": "arXiv:2606.12655v1 Announce Type: new Abstract: Continual learning (CL) models often use experience replay to reduce catastrophic forgetting, but their robustness to replay sampling interference remains underexplored. Existing CL attacks alter inputs or training pipelines (poisoning/backdoors) and rarely include explicit auditable constraints, limiting realism. Here, auditability means a monitor can verify compliance from sampler-visible telemetry - e.g., logged replay index/label statistics - by checking that the realized replay class histogram stays close to a nominal baseline and that replay rate is unchanged per batch and/or over a rolling window. We study a limited-privilege insider who controls only replay index selection, not pixels, labels, or model parameters, while staying within",
     "published": "Fri, 12 Jun 2026 00:00:00 -0400",
     "source": "arXiv cs.CR (密码学与安全)",
     "domain": "security",
     "category": "research",
-    "hash": "0101942fff2c9a89",
-    "crawled_at": "2026-06-13T06:00:34.256128"
+    "hash": "f4738c9a8a6d0ebd",
+    "crawled_at": "2026-06-13T06:27:07.023977"
   },
   {
-    "title": "From Parameters to Feature Space: Task Arithmetic for Backdoor Mitigation in Model Merging",
-    "link": "https://arxiv.org/abs/2606.12498",
-    "summary": "arXiv:2606.12498v1 Announce Type: new Abstract: Model merging (MM) has gained significant attention as a cost-effective approach to integrate multiple task-specific models into a unified model. However, recent work reveals that MM is highly susceptible to backdoor attacks. Existing defenses based on task arithmetic often fail to eliminate backdoors without substantially degrading clean-task performance, owing to their reliance on direct parameter-space editing. To address this gap, we propose Linear Feature Path Minimization (LFPM), a backdoor mitigation framework for model merging, which introduces an anti-backdoor task vector into the backdoored merged model. Unlike prior approaches, LFPM formulates the backdoor robustness of the merged model from a unified feature-space perspective unde",
+    "title": "CAPED: Context-Aware Privacy Exposure Defense for Mobile GUI Agents",
+    "link": "https://arxiv.org/abs/2606.12666",
+    "summary": "arXiv:2606.12666v1 Announce Type: new Abstract: Screenshot-based mobile GUI agents can operate ordinary smartphone apps through the same visual interface as a human user, but this capability also turns every screen observation into a privacy boundary. During normal task execution, screenshots may expose contacts, messages, photos, files, recommendations, health cues, and other sensitive context that is unrelated to the user's request. We call this problem incidental visual privacy exposure. It is difficult to address with existing defenses: text anonymization misses many visual and inferential cues, while generic privacy masking can remove the evidence and controls that a GUI agent needs to complete the task. This paper presents CAPED, a context-aware pre-upload exposure control layer for ",
     "published": "Fri, 12 Jun 2026 00:00:00 -0400",
     "source": "arXiv cs.CR (密码学与安全)",
     "domain": "security",
     "category": "research",
-    "hash": "b2866a52db977d1e",
-    "crawled_at": "2026-06-13T06:00:34.256128"
+    "hash": "316eb0302c428963",
+    "crawled_at": "2026-06-13T06:27:07.023977"
   },
   {
-    "title": "Beyond Attack Success Rate: Examining Trigger Leakage in Vision-Language Agentic Systems",
-    "link": "https://arxiv.org/abs/2606.12586",
-    "summary": "arXiv:2606.12586v1 Announce Type: new Abstract: Vision-Language Agentic Systems (VLAS) connect visual perception to planning, tool use, and physical actions. This means backdoor-type triggers can propagate through both decision pipelines and their connected interfaces, thus making visual backdoors a system-level threat. Current evaluations on such backdoors focus on clean accuracy and attack success rate (ASR), metrics that capture whether a trigger works, but not whether an attack is actually \"precise\" -- i.e. whether it triggers hidden behaviors only when intended. In this work, we formalize the failure of trigger precision as \"trigger leakage\": inputs that are visually or semantically close to the intended trigger and therefore inadvertently activate the attacker-specified behavior. To ",
+    "title": "SMSR: Certified Defence Against Runtime Memory Poisoning in Persistent LLM Agent Systems",
+    "link": "https://arxiv.org/abs/2606.12703",
+    "summary": "arXiv:2606.12703v1 Announce Type: new Abstract: Retrieval-augmented generation (RAG) agents increasingly run with persistent memory that accumulates across user sessions. This creates a new attack surface: an adversary interacting only through normal channels can inject crafted memories that, once retrieved, steer the agent's responses for future users, without touching model weights or code. We call this Multi-Session Memory Poisoning (MSMP) and show that no existing defence certifies against it; static-corpus defences (RobustRAG, ReliabilityRAG) assume a fixed knowledge base, and heuristic filters are bypassed by fluent enterprise-style text. We present Signed Memory with Smoothed Retrieval (SMSR), the first defence with a certified robustness bound for this setting. Component 1 adds HMA",
     "published": "Fri, 12 Jun 2026 00:00:00 -0400",
     "source": "arXiv cs.CR (密码学与安全)",
     "domain": "security",
     "category": "research",
-    "hash": "5ee27534335518ba",
-    "crawled_at": "2026-06-13T06:00:34.256128"
+    "hash": "ed5f43afd51ec1c6",
+    "crawled_at": "2026-06-13T06:27:07.023977"
   },
   {
-    "title": "New OpenAI Academy courses for the next era of work",
-    "link": "https://openai.com/index/academy-courses-applying-ai-at-work",
-    "summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.",
-    "published": "Fri, 12 Jun 2026 10:00:00 GMT",
+    "title": "Alignment",
+    "link": "https://www.anthropic.com/research/team/alignment",
+    "summary": "Alignment",
+    "published": "Wed, 27 Nov 2024 00:00:00 +0000",
+    "source": "Anthropic Research",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "97d63b20ac680cd4",
+    "crawled_at": "2026-06-13T06:27:07.818656"
+  },
+  {
+    "title": "Interpretability",
+    "link": "https://www.anthropic.com/research/team/interpretability",
+    "summary": "Interpretability",
+    "published": "Wed, 14 Aug 2024 00:00:00 +0000",
+    "source": "Anthropic Research",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "39b841524fa1ee01",
+    "crawled_at": "2026-06-13T06:27:07.818656"
+  },
+  {
+    "title": "olmo-eval: An evaluation workbench for the model development loop",
+    "link": "https://huggingface.co/blog/allenai/olmo-eval",
+    "summary": "",
+    "published": "Fri, 12 Jun 2026 15:56:10 GMT",
+    "source": "Hugging Face Blog",
+    "domain": "ai",
+    "category": "engineering",
+    "hash": "12dd6fbf31af2076",
+    "crawled_at": "2026-06-13T06:27:08.506840"
+  },
+  {
+    "title": "Introducing Mellum2: A 12B Mixture-of-Experts Model by JetBrains",
+    "link": "https://huggingface.co/blog/JetBrains/mellum2-launch",
+    "summary": "",
+    "published": "Mon, 01 Jun 2026 15:45:17 GMT",
+    "source": "Hugging Face Blog",
+    "domain": "ai",
+    "category": "engineering",
+    "hash": "9f44cc4e41053e43",
+    "crawled_at": "2026-06-13T06:27:08.506840"
+  },
+  {
+    "title": "Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic",
+    "link": "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
+    "summary": "",
+    "published": "Mon, 01 Jun 2026 13:51:18 GMT",
+    "source": "Hugging Face Blog",
+    "domain": "ai",
+    "category": "engineering",
+    "hash": "2a3148b99023220a",
+    "crawled_at": "2026-06-13T06:27:08.506840"
+  },
+  {
+    "title": "Biodefense in the Intelligence Age",
+    "link": "https://openai.com/index/biodefense-in-the-intelligence-age",
+    "summary": "An action plan for AI-powered biological resilience",
+    "published": "Thu, 04 Jun 2026 00:00:00 GMT",
     "source": "OpenAI Blog",
     "domain": "ai",
     "category": "industry",
-    "hash": "1497ee4ed2dc60cc",
-    "crawled_at": "2026-06-13T06:05:22.225096"
+    "hash": "4cd4172cdd19affb",
+    "crawled_at": "2026-06-13T06:27:09.631018"
   },
   {
-    "title": "How Preply combines AI and human tutors to personalize learning",
-    "link": "https://openai.com/index/preply",
-    "summary": "Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exercises.",
-    "published": "Fri, 12 Jun 2026 00:00:00 GMT",
+    "title": "Introducing new capabilities to GPT-Rosalind",
+    "link": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
+    "summary": "GPT-Rosalind advances life sciences research with enhanced biological reasoning, medicinal chemistry expertise, genomics analysis, and experimental workflow capabilities.",
+    "published": "Wed, 03 Jun 2026 13:15:00 GMT",
     "source": "OpenAI Blog",
     "domain": "ai",
     "category": "industry",
-    "hash": "d959b4f9d090accb",
-    "crawled_at": "2026-06-13T06:05:22.225096"
+    "hash": "d9ff02c4310622f4",
+    "crawled_at": "2026-06-13T06:27:09.631018"
   },
   {
-    "title": "Dreaming: Better memory for a more helpful ChatGPT",
-    "link": "https://openai.com/index/chatgpt-memory-dreaming",
-    "summary": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
-    "published": "Thu, 04 Jun 2026 09:00:00 GMT",
+    "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+    "link": "https://openai.com/index/wasmer",
+    "summary": "See how Wasmer used Codex with GPT-5.5 to build a Node.js runtime for the edge, accelerating development 10x to 20x and shipping in weeks instead of months.",
+    "published": "Wed, 03 Jun 2026 12:00:00 GMT",
     "source": "OpenAI Blog",
     "domain": "ai",
     "category": "industry",
-    "hash": "a158d0731b84b7dd",
-    "crawled_at": "2026-06-13T06:05:22.225096"
+    "hash": "297bc17ec6f337a8",
+    "crawled_at": "2026-06-13T06:27:09.631018"
+  },
+  {
+    "title": "Over 400 Arch Linux AUR Packages Hijacked to Deploy Infostealer and eBPF Rootkit",
+    "link": "https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html",
+    "summary": "Attackers took over more than 400 packages in the Arch User Repository (AUR) this week and rewrote their build scripts to install a credential stealer on any machine that built them. The malware is a Rust binary built to harvest developer secrets. When it lands with root, it can also load an eBPF rootkit to hide itself. The AUR is Arch Linux's community package collection, and it is separate",
+    "published": "Sat, 13 Jun 2026 01:03:25 +0530",
+    "source": "The Hacker News",
+    "domain": "security",
+    "category": "news",
+    "hash": "f62e2548ec4a7c20",
+    "crawled_at": "2026-06-13T06:27:11.384055"
+  },
+  {
+    "title": "Google Sues Chinese Smishing Network Accused of Using Gemini AI in Phishing",
+    "link": "https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html",
+    "summary": "Google on Friday said it's pursuing legal action against a Chinese cybercrime network, accusing it of using its Gemini artificial intelligence (AI) agent to send phishing text messages targeting Americans. The network is said to be behind the development and management of a phishing-as-a-service (PhaaS) software kit called Outsider, per the tech giant. \"The operation weaponized Gemini to help",
+    "published": "Sat, 13 Jun 2026 00:29:32 +0530",
+    "source": "The Hacker News",
+    "domain": "security",
+    "category": "news",
+    "hash": "38d076870ad3d8bf",
+    "crawled_at": "2026-06-13T06:27:11.384055"
+  },
+  {
+    "title": "China-Linked Hackers Backdoored Linux Login Software to Hide for Nearly a Decade",
+    "link": "https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html",
+    "summary": "Instead of hiding on the laptops and servers defenders watch most closely, a China-nexus group spent close to a decade hidden inside the Linux login system itself. Sygnia, which tracks the group as Velvet Ant, says it backdoored the PAM and OpenSSH components that decide who is allowed to sign in, planting its access where ordinary cleanup could not reach it. The network it targeted had no",
+    "published": "Fri, 12 Jun 2026 23:47:55 +0530",
+    "source": "The Hacker News",
+    "domain": "security",
+    "category": "news",
+    "hash": "739685e2e3eeb8cf",
+    "crawled_at": "2026-06-13T06:27:11.384055"
   }
 ]
