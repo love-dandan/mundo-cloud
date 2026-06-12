@@ -1,0 +1,101 @@
+[
+  {
+    "title": "ToolSense: A Diagnostic Framework for Auditing Parametric Tool Knowledge in LLMs",
+    "link": "https://arxiv.org/abs/2606.12451",
+    "summary": "arXiv:2606.12451v1 Announce Type: new Abstract: Large language models deployed as agents over large tool catalogs face a critical tool-retrieval bottleneck. As embedding-based retrieval approaches rely on compact encoders that may under-capture specialized tool semantics, parametric tool retrieval addresses this by encoding each tool as a virtual token appended to the LLM vocabulary, fine-tuned in two stages (memorization then retrieval SFT) to use the LLM as a retriever, achieving strong performance on standard ToolBench retrieval benchmarks. Yet these benchmarks use verbose, fully-specified queries, and their evaluation applies constrained decoding that restricts outputs to valid token paths, neither reveals whether the model actually understands its tools. We introduce \\textbf{ToolSense",
+    "published": "Fri, 12 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "e66b44f97db54019",
+    "crawled_at": "2026-06-13T06:00:31.362988"
+  },
+  {
+    "title": "Arbor: Tree Search as a Cognition Layer for Autonomous Agents",
+    "link": "https://arxiv.org/abs/2606.12563",
+    "summary": "arXiv:2606.12563v1 Announce Type: new Abstract: Arbor is a multi-agent framework that introduces structured tree search as a cognition layer for autonomous agents operating in large, stateful action spaces. Prior autonomous optimization systems operate on isolated targets with stateless evaluation. Arbor instead maintains an explicit search tree of scored hypotheses that serves as the shared working memory across agents, evolving with every measurement, treating failures as diagnostic signal that reshapes subsequent exploration, and expanding as prior successes shift the bottleneck distribution. We validate Arbor on full-stack LLM inference optimization, a domain where achieving peak performance has historically required coordinated effort from engineering teams across the application, fra",
+    "published": "Fri, 12 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "eb5bf66b7bf2d3c2",
+    "crawled_at": "2026-06-13T06:00:31.362988"
+  },
+  {
+    "title": "Strategic Decision Support for AI Agents",
+    "link": "https://arxiv.org/abs/2606.12587",
+    "summary": "arXiv:2606.12587v1 Announce Type: new Abstract: Traditionally, decision support studies how humans use machine learning models to make better decisions. In modern agentic systems, this division of roles is increasingly reversed: AI agents act on behalf of users, while humans and tools becomes support mechanisms around them. This role reversal brings reliability concerns to the forefront, since agentic errors can be consequential and agent behavior must remain aligned with human goals and constraints. Departing from the classical view of decision support, we revisit its two basic principles, the cost--value tradeoff of seeking support and the role of uncertainty quantification, in a setting where AI agents are the central actors. We propose a framework for strategic decision support for AI ",
+    "published": "Fri, 12 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "48db302f6c7877d1",
+    "crawled_at": "2026-06-13T06:00:31.362988"
+  },
+  {
+    "title": "Influence Factors on RAG Poisoning",
+    "link": "https://arxiv.org/abs/2606.12469",
+    "summary": "arXiv:2606.12469v1 Announce Type: new Abstract: Retrieval-Augmented Generation (RAG) systems enhance large language models by grounding responses in retrieved documents from external knowledge sources at inference time. However, this reliance on retrieved content introduces vulnerabilities to poisoning attacks, in which adversarial documents can manipulate both the retrieval process and the generated outputs. This paper investigates poisoning robustness in RAG through a full factorial experimental study covering 432 configurations. We analyze the impacts of dataset, retriever type, retrieval depth, database composition, chunking strategy, and generator model on retrieval-level and generation-level metrics. The results show that retriever architecture, dataset, and retrieval depth are the s",
+    "published": "Fri, 12 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "0101942fff2c9a89",
+    "crawled_at": "2026-06-13T06:00:34.256128"
+  },
+  {
+    "title": "From Parameters to Feature Space: Task Arithmetic for Backdoor Mitigation in Model Merging",
+    "link": "https://arxiv.org/abs/2606.12498",
+    "summary": "arXiv:2606.12498v1 Announce Type: new Abstract: Model merging (MM) has gained significant attention as a cost-effective approach to integrate multiple task-specific models into a unified model. However, recent work reveals that MM is highly susceptible to backdoor attacks. Existing defenses based on task arithmetic often fail to eliminate backdoors without substantially degrading clean-task performance, owing to their reliance on direct parameter-space editing. To address this gap, we propose Linear Feature Path Minimization (LFPM), a backdoor mitigation framework for model merging, which introduces an anti-backdoor task vector into the backdoored merged model. Unlike prior approaches, LFPM formulates the backdoor robustness of the merged model from a unified feature-space perspective unde",
+    "published": "Fri, 12 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "b2866a52db977d1e",
+    "crawled_at": "2026-06-13T06:00:34.256128"
+  },
+  {
+    "title": "Beyond Attack Success Rate: Examining Trigger Leakage in Vision-Language Agentic Systems",
+    "link": "https://arxiv.org/abs/2606.12586",
+    "summary": "arXiv:2606.12586v1 Announce Type: new Abstract: Vision-Language Agentic Systems (VLAS) connect visual perception to planning, tool use, and physical actions. This means backdoor-type triggers can propagate through both decision pipelines and their connected interfaces, thus making visual backdoors a system-level threat. Current evaluations on such backdoors focus on clean accuracy and attack success rate (ASR), metrics that capture whether a trigger works, but not whether an attack is actually \"precise\" -- i.e. whether it triggers hidden behaviors only when intended. In this work, we formalize the failure of trigger precision as \"trigger leakage\": inputs that are visually or semantically close to the intended trigger and therefore inadvertently activate the attacker-specified behavior. To ",
+    "published": "Fri, 12 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "5ee27534335518ba",
+    "crawled_at": "2026-06-13T06:00:34.256128"
+  },
+  {
+    "title": "New OpenAI Academy courses for the next era of work",
+    "link": "https://openai.com/index/academy-courses-applying-ai-at-work",
+    "summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.",
+    "published": "Fri, 12 Jun 2026 10:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "1497ee4ed2dc60cc",
+    "crawled_at": "2026-06-13T06:05:22.225096"
+  },
+  {
+    "title": "How Preply combines AI and human tutors to personalize learning",
+    "link": "https://openai.com/index/preply",
+    "summary": "Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exercises.",
+    "published": "Fri, 12 Jun 2026 00:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "d959b4f9d090accb",
+    "crawled_at": "2026-06-13T06:05:22.225096"
+  },
+  {
+    "title": "Dreaming: Better memory for a more helpful ChatGPT",
+    "link": "https://openai.com/index/chatgpt-memory-dreaming",
+    "summary": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
+    "published": "Thu, 04 Jun 2026 09:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "a158d0731b84b7dd",
+    "crawled_at": "2026-06-13T06:05:22.225096"
+  }
+]

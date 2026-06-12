@@ -506,5 +506,41 @@
   "4624cd88718ed24c": {
     "title": "New GreatXML Exploit Bypasses Windows BitLocker via Recovery Partition XML Files",
     "crawled_at": "2026-06-12T06:27:08.289084"
+  },
+  "e66b44f97db54019": {
+    "title": "ToolSense: A Diagnostic Framework for Auditing Parametric Tool Knowledge in LLMs",
+    "crawled_at": "2026-06-13T06:00:31.362988"
+  },
+  "eb5bf66b7bf2d3c2": {
+    "title": "Arbor: Tree Search as a Cognition Layer for Autonomous Agents",
+    "crawled_at": "2026-06-13T06:00:31.362988"
+  },
+  "48db302f6c7877d1": {
+    "title": "Strategic Decision Support for AI Agents",
+    "crawled_at": "2026-06-13T06:00:31.362988"
+  },
+  "0101942fff2c9a89": {
+    "title": "Influence Factors on RAG Poisoning",
+    "crawled_at": "2026-06-13T06:00:34.256128"
+  },
+  "b2866a52db977d1e": {
+    "title": "From Parameters to Feature Space: Task Arithmetic for Backdoor Mitigation in Model Merging",
+    "crawled_at": "2026-06-13T06:00:34.256128"
+  },
+  "5ee27534335518ba": {
+    "title": "Beyond Attack Success Rate: Examining Trigger Leakage in Vision-Language Agentic Systems",
+    "crawled_at": "2026-06-13T06:00:34.256128"
+  },
+  "1497ee4ed2dc60cc": {
+    "title": "New OpenAI Academy courses for the next era of work",
+    "crawled_at": "2026-06-13T06:05:22.225096"
+  },
+  "d959b4f9d090accb": {
+    "title": "How Preply combines AI and human tutors to personalize learning",
+    "crawled_at": "2026-06-13T06:05:22.225096"
+  },
+  "a158d0731b84b7dd": {
+    "title": "Dreaming: Better memory for a more helpful ChatGPT",
+    "crawled_at": "2026-06-13T06:05:22.225096"
   }
 }
