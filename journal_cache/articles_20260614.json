@@ -1,0 +1,35 @@
+[
+  {
+    "title": "OpenAI public policy agenda",
+    "link": "https://openai.com/index/public-policy-agenda",
+    "summary": "OpenAI outlines its public policy agenda for AI, including safety, youth protection, workforce transition, and global standards to ensure AI benefits society.",
+    "published": "Wed, 03 Jun 2026 10:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "31af04a9e17e6fc1",
+    "crawled_at": "2026-06-14T06:01:54.706509"
+  },
+  {
+    "title": "A blueprint for democratic governance of frontier AI",
+    "link": "https://openai.com/index/frontier-safety-blueprint",
+    "summary": "OpenAI outlines a blueprint for U.S. governance of frontier AI, proposing a federal framework for safety, resilience, and national security.",
+    "published": "Wed, 03 Jun 2026 10:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "a9cf8fdb1cb5cf84",
+    "crawled_at": "2026-06-14T06:01:54.706509"
+  },
+  {
+    "title": "Travelers deploys AI-powered claims countrywide with OpenAI",
+    "link": "https://openai.com/index/travelers",
+    "summary": "Travelers built an AI-powered Claim Assistant with OpenAI to guide customers through filing claims, provide 24/7 support, and scale operations during peak demand.",
+    "published": "Tue, 02 Jun 2026 12:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "fb32183f47b1e333",
+    "crawled_at": "2026-06-14T06:01:54.706509"
+  }
+]
