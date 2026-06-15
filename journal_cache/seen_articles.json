@@ -622,5 +622,65 @@
   "fb32183f47b1e333": {
     "title": "Travelers deploys AI-powered claims countrywide with OpenAI",
     "crawled_at": "2026-06-14T06:01:54.706509"
+  },
+  "0fc539755273234e": {
+    "title": "A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem",
+    "crawled_at": "2026-06-16T06:00:27.292788"
+  },
+  "6c082175081e9cdb": {
+    "title": "UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems",
+    "crawled_at": "2026-06-16T06:00:27.292788"
+  },
+  "53c529b389401662": {
+    "title": "History of the Muddy Children Puzzle",
+    "crawled_at": "2026-06-16T06:00:27.292788"
+  },
+  "3f6b3d2b04f3758b": {
+    "title": "FreoStream:Enhancing Stream Guardrails via Future-Aware Reasoning and Safety-Aligned Optimization",
+    "crawled_at": "2026-06-16T06:00:43.638113"
+  },
+  "a6189eb6d8556d2b": {
+    "title": "SEVRA-BENCH: Social Engineering of Vulnerabilities in Review Agents",
+    "crawled_at": "2026-06-16T06:00:43.638113"
+  },
+  "e1a2ddef6f060ba8": {
+    "title": "Smart Blockchain-Based Access Control for the Internet of Things",
+    "crawled_at": "2026-06-16T06:00:43.638113"
+  },
+  "5e60fa041361adfa": {
+    "title": "Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler",
+    "crawled_at": "2026-06-16T06:02:24.050722"
+  },
+  "d0645eb0042a7d8c": {
+    "title": "Reachy Mini goes fully local",
+    "crawled_at": "2026-06-16T06:02:24.050722"
+  },
+  "34bab66c8cdf7582": {
+    "title": "Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL",
+    "crawled_at": "2026-06-16T06:02:24.050722"
+  },
+  "bbbd7ca71e83a98b": {
+    "title": "Introducing the OpenAI Partner Network",
+    "crawled_at": "2026-06-16T06:02:25.077142"
+  },
+  "100a67594dde6801": {
+    "title": "Codex for every role, tool, and workflow",
+    "crawled_at": "2026-06-16T06:02:25.077142"
+  },
+  "81a0f23094cf137f": {
+    "title": "Advancing youth safety and opportunity through global leadership",
+    "crawled_at": "2026-06-16T06:02:25.077142"
+  },
+  "6130c0552ed7b617": {
+    "title": "Chinese Hackers Abused Google Workspace Rules to Steal Research and Defense Emails",
+    "crawled_at": "2026-06-16T06:03:31.967177"
+  },
+  "7f52cd64159bb2f2": {
+    "title": "North Korean Hackers Are Turning Developer Tools Into Malware Delivery Channels",
+    "crawled_at": "2026-06-16T06:03:31.967177"
+  },
+  "181dad225f917b34": {
+    "title": "LiteLLM Vulnerability Chain Lets Low-Privilege Users Take Over AI Gateway Servers",
+    "crawled_at": "2026-06-16T06:03:31.967177"
   }
 }

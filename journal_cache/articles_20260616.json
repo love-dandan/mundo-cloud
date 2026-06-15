@@ -1,0 +1,167 @@
+[
+  {
+    "title": "A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem",
+    "link": "https://arxiv.org/abs/2606.13682",
+    "summary": "arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and service settings but remains computationally challenging as the number of jobs and machines increases. While exact methods quickly become intractable, classical dispatching rules and metaheuristics may require substantial tuning to maintain solution quality at large scales. This study develops a Transformer-based scheduling policy for OSSP using an encoder-decoder architecture with multi-head attention. The model is trained on Taillard benchmark instances (4x4, 5x5, 7x7, and 10x10) using only the processing-time matrix as input and produces feasible schedules with makespans typically within 15-30% of best-known values. To evaluate scalability, the trained policy is applied ",
+    "published": "Mon, 15 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "0fc539755273234e",
+    "crawled_at": "2026-06-16T06:00:27.292788"
+  },
+  {
+    "title": "UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems",
+    "link": "https://arxiv.org/abs/2606.13683",
+    "summary": "arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning methods struggle to dynamically adapt to diverse user characteristics, this paper proposes a User Portrait based Nested Rollout Policy Adaptation (UP-NRPA) online framework with Large Language Models. In contrast to conventional approaches dependent on model training and require offline reinforcement learning policy models for user groups, UP-NRPA enables dynamic customization of dialogue strategies through an adaptive mechanism. This is achieved by leveraging real-time user feedback alongside personality, preferences, and objectives mapped from the current user portrait, thereby adapting to user characteristics without offline reinforcement learning. In collaborative and non-coll",
+    "published": "Mon, 15 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "6c082175081e9cdb",
+    "crawled_at": "2026-06-16T06:00:27.292788"
+  },
+  {
+    "title": "History of the Muddy Children Puzzle",
+    "link": "https://arxiv.org/abs/2606.13703",
+    "summary": "arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance that has been inspiring for the development of epistemic logic. Who came up with it first? This is unclear. We trace the origin of the Muddy Children Puzzle through logical and literary publications over the past two centuries. The puzzle inspired a numerous variations such as involving numbers or coloured hats. We also present a novel hats puzzle involving self-reference.",
+    "published": "Mon, 15 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "53c529b389401662",
+    "crawled_at": "2026-06-16T06:00:27.292788"
+  },
+  {
+    "title": "FreoStream:Enhancing Stream Guardrails via Future-Aware Reasoning and Safety-Aligned Optimization",
+    "link": "https://arxiv.org/abs/2606.13737",
+    "summary": "arXiv:2606.13737v1 Announce Type: new Abstract: Stream guardrails enable token-level safety detection before full responses are generated. However, they often make overly conservative judgements and block those sensitive but safe tokens, which is known as over-refusal. Due to lack of full context, they also fail to detect implicitly harmful content from jailbreaking. To address these challenges, we propose FreoStream, a novel streaming guardrail framework. Specifically, FreoStream fine-tunes a LoRA module to perform Future-Aware Reasoning when the base guardrail detects unsafe tokens. The reasoning process follows a Future-Reason-Judge paradigm: predict the future, reason about the full context and give the final judgement. This design can effectively reduce over-refusal by incorporating t",
+    "published": "Mon, 15 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "3f6b3d2b04f3758b",
+    "crawled_at": "2026-06-16T06:00:43.638113"
+  },
+  {
+    "title": "SEVRA-BENCH: Social Engineering of Vulnerabilities in Review Agents",
+    "link": "https://arxiv.org/abs/2606.13757",
+    "summary": "arXiv:2606.13757v1 Announce Type: new Abstract: Large language model (LLM) reviewers are increasingly used in pull-request (PR) workflows, where their approvals help decide which code is merged into a repository. This raises a question that benchmarks for static vulnerability detection or code generation do not address: can an automated reviewer reject a malicious contribution when the attacker controls both the code change and the accompanying PR text? We introduce SEVRA-BENCH (Social Engineering of Vulnerabilities in Review Agents), a benchmark that measures how often an automated reviewer approves such adversarial pull requests. Each malicious PR in SEVRA-BENCH is built from a real project commit that previously fixed a vulnerability listed in the Common Vulnerabilities and Exposures (C",
+    "published": "Mon, 15 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "a6189eb6d8556d2b",
+    "crawled_at": "2026-06-16T06:00:43.638113"
+  },
+  {
+    "title": "Smart Blockchain-Based Access Control for the Internet of Things",
+    "link": "https://arxiv.org/abs/2606.13798",
+    "summary": "arXiv:2606.13798v1 Announce Type: new Abstract: Securing access control in large-scale Internet of Things (IoT) deployments requires mechanisms that adapt to risk while preserving low latency for benign traffic. Permissioned blockchains such as Hyperledger Fabric offer auditability through smart contracts, but static endorsement policies impose the same validation depth on all requests, regardless of security posture. We propose a risk-adaptive enforcement layer for Hyperledger Fabric that couples an off-chain LSTM-based risk oracle with deterministic on-chain checks. The oracle assigns each request to a tier (Low, Moderate, High) and issues a signed attestation bound to the client identity and target key/version. Endorsing peers verify the attestation in chaincode and enforce tier-conditi",
+    "published": "Mon, 15 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "e1a2ddef6f060ba8",
+    "crawled_at": "2026-06-16T06:00:43.638113"
+  },
+  {
+    "title": "Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler",
+    "link": "https://huggingface.co/blog/torch-profiler",
+    "summary": "",
+    "published": "Fri, 29 May 2026 00:00:00 GMT",
+    "source": "Hugging Face Blog",
+    "domain": "ai",
+    "category": "engineering",
+    "hash": "5e60fa041361adfa",
+    "crawled_at": "2026-06-16T06:02:24.050722"
+  },
+  {
+    "title": "Reachy Mini goes fully local",
+    "link": "https://huggingface.co/blog/local-reachy-mini-conversation",
+    "summary": "",
+    "published": "Wed, 27 May 2026 00:00:00 GMT",
+    "source": "Hugging Face Blog",
+    "domain": "ai",
+    "category": "engineering",
+    "hash": "d0645eb0042a7d8c",
+    "crawled_at": "2026-06-16T06:02:24.050722"
+  },
+  {
+    "title": "Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL",
+    "link": "https://huggingface.co/blog/delta-weight-sync",
+    "summary": "",
+    "published": "Wed, 27 May 2026 00:00:00 GMT",
+    "source": "Hugging Face Blog",
+    "domain": "ai",
+    "category": "engineering",
+    "hash": "34bab66c8cdf7582",
+    "crawled_at": "2026-06-16T06:02:24.050722"
+  },
+  {
+    "title": "Introducing the OpenAI Partner Network",
+    "link": "https://openai.com/index/introducing-openai-partner-network",
+    "summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
+    "published": "Sun, 14 Jun 2026 17:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "bbbd7ca71e83a98b",
+    "crawled_at": "2026-06-16T06:02:25.077142"
+  },
+  {
+    "title": "Codex for every role, tool, and workflow",
+    "link": "https://openai.com/index/codex-for-every-role-tool-workflow",
+    "summary": "Discover new Codex plugins, sites, and annotations that help analysts, marketers, designers, investors, and other teams get more done with AI.",
+    "published": "Tue, 02 Jun 2026 09:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "100a67594dde6801",
+    "crawled_at": "2026-06-16T06:02:25.077142"
+  },
+  {
+    "title": "Advancing youth safety and opportunity through global leadership",
+    "link": "https://openai.com/index/advancing-youth-safety-and-opportunity-through-global-leadership",
+    "summary": "OpenAI calls for global action on youth AI safety, proposing an international institute to strengthen safeguards, standards, and opportunities for young people.",
+    "published": "Tue, 02 Jun 2026 07:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "81a0f23094cf137f",
+    "crawled_at": "2026-06-16T06:02:25.077142"
+  },
+  {
+    "title": "Chinese Hackers Abused Google Workspace Rules to Steal Research and Defense Emails",
+    "link": "https://thehackernews.com/2026/06/chinese-hackers-abused-google-workspace.html",
+    "summary": "A China-linked espionage group hid inside North American medical, academic, and military research networks for more than a year, quietly stealing sensitive research and defense email. The way in was a backdoor on their REDCap research servers that stole login credentials. The exfiltration was the unusual part: the attackers rewired the victims' own Google Workspace rules to copy any message",
+    "published": "Tue, 16 Jun 2026 01:14:06 +0530",
+    "source": "The Hacker News",
+    "domain": "security",
+    "category": "news",
+    "hash": "6130c0552ed7b617",
+    "crawled_at": "2026-06-16T06:03:31.967177"
+  },
+  {
+    "title": "North Korean Hackers Are Turning Developer Tools Into Malware Delivery Channels",
+    "link": "https://thehackernews.com/2026/06/north-korean-hackers-are-turning.html",
+    "summary": "Cybersecurity researchers have flagged two malicious cyber campaigns that exhibit similarities with a persistent North Korean threat cluster known as Contagious Interview (aka Famous Chollima, HexagonalRodent, and Void Dokkaebi). According to a report published by Proofpoint, the threat actor has been found orchestrating phishing campaigns using developer role recruitment or code review themes",
+    "published": "Tue, 16 Jun 2026 01:02:52 +0530",
+    "source": "The Hacker News",
+    "domain": "security",
+    "category": "news",
+    "hash": "7f52cd64159bb2f2",
+    "crawled_at": "2026-06-16T06:03:31.967177"
+  },
+  {
+    "title": "LiteLLM Vulnerability Chain Lets Low-Privilege Users Take Over AI Gateway Servers",
+    "link": "https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html",
+    "summary": "A default low-privilege account on a LiteLLM proxy can climb to full admin and run code on the server by chaining three vulnerabilities, researchers at Obsidian Security disclosed LiteLLM is a widely deployed open-source AI gateway that brokers calls to more than 100 model providers behind one OpenAI-compatible interface. A server takeover exposes every provider key it holds, the secrets that",
+    "published": "Mon, 15 Jun 2026 22:09:01 +0530",
+    "source": "The Hacker News",
+    "domain": "security",
+    "category": "news",
+    "hash": "181dad225f917b34",
+    "crawled_at": "2026-06-16T06:03:31.967177"
+  }
+]
