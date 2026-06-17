@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search",
+    "link": "https://arxiv.org/abs/2606.17209",
+    "summary": "arXiv:2606.17209v1 Announce Type: new Abstract: Test-time scaling for agentic search typically increases depth (i.e., more turns and tokens per trajectory) or breadth (i.e., more parallel rollouts). Here we focus on breadth scaling, showing that standard parallel sampling yields diminishing returns, tracing this to query redundancy at the first turn. When models issue similar first queries across rollouts, the threads retrieve overlapping evidence, and subsequent turns are conditioned on this shared retrieval. We address this limitation with DivInit, a training-free intervention at the first turn. Rather than sampling k independent first queries, DivInit draws n candidates from a single call, picks k < n diverse seeds, and runs them as parallel trajectories. Across five open-weight models ",
+    "published": "Wed, 17 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "d8278daa9076ba9e",
+    "crawled_at": "2026-06-18T06:00:36.578554"
+  },
+  {
+    "title": "When Rules Learn: A Self-Evolving Agent for Legal Case Retrieval",
+    "link": "https://arxiv.org/abs/2606.17220",
+    "summary": "arXiv:2606.17220v1 Announce Type: new Abstract: Legal case retrieval remains challenging due to the complexity of legal language and the need for precise lexical alignment between queries and relevant cases. Although dense retrieval models have achieved notable progress, empirical studies show that BM25 continues to serve as a strong baseline in this domain. It motivates us to propose a self-evolving framework for rule-driven query rewriting that enhances BM25 without any parameter training. The framework equips an LLM-based agent with an automatic evaluation environment, enabling it to iteratively create rewriting rules, plan validation experiments over rule combinations, and eliminate ineffective rules based on historical feedbacks. We evaluate our method on the Chinese legal case retrie",
+    "published": "Wed, 17 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "3ee77efc729c83b9",
+    "crawled_at": "2026-06-18T06:00:36.578554"
+  },
+  {
+    "title": "SkillChain-Gym: A Benchmark for Reskilling-Aware Production-Inventory Control under Disruptions",
+    "link": "https://arxiv.org/abs/2606.17266",
+    "summary": "arXiv:2606.17266v1 Announce Type: new Abstract: Production planning increasingly has to treat workforce capability as a decision variable: certifications lapse when skills are not maintained, new products require skills the current workforce does not hold, and reskilling competes for the same worker hours needed for production. Existing operations benchmarks usually treat labor as exogenous, while workforce-planning models with skills and learning are rarely released as reusable testbeds. We introduce SkillChain-Gym, a benchmark specification for reskilling-aware production-inventory control: a single-site environment with stylized worker skill-state dynamics, hard threshold certification, forgetting, and capacity-consuming training actions constrained by the same per-worker time budget as",
+    "published": "Wed, 17 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.AI",
+    "domain": "ai",
+    "category": "research",
+    "hash": "adc5bb2678d27528",
+    "crawled_at": "2026-06-18T06:00:36.578554"
+  },
+  {
+    "title": "Security and Human-Centered Assessment of BACnet-Controlled DALI Infrastructure in an Educational Building Automation Testbed",
+    "link": "https://arxiv.org/abs/2606.17089",
+    "summary": "arXiv:2606.17089v1 Announce Type: new Abstract: Building automation and control systems integrate heating, ventilation, air conditioning, lighting, sensing, and management functions through specialized communication protocols. While this integration enables flexible building operation, it also creates complex cyber-physical environments that are difficult to inspect, secure, and explain to new analysts. This paper presents a practical security and human-centered case study of a BACnet/IP building automation testbed with DALI lighting infrastructure, investigated during a domotics-oriented cybersecurity hackathon in Thun, Switzerland in April 2026. The study combines network-oriented enumeration, object-level inspection, physical rack analysis, and reflective HCI analysis of tool-supported ",
+    "published": "Wed, 17 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "e7d6f1b57fa12e3a",
+    "crawled_at": "2026-06-18T06:00:53.597346"
+  },
+  {
+    "title": "Securing Multi-Agent GIS Systems: Risk Evaluation and Prompt Hardening Optimization",
+    "link": "https://arxiv.org/abs/2606.17092",
+    "summary": "arXiv:2606.17092v1 Announce Type: new Abstract: Agentic systems are increasingly integrated with geographic information systems (GIS), where multi-agent coordination enables complex conversational and spatial analysis but introduces security risks. This work presents a security-oriented framework for risk identification, evaluation, and mitigation in a multi-agent GIS system while maintaining adaptability to broader agentic architectures. We test the agentic system of a commercial geospatial partner while developing a modular state-machine-based orchestration framework that abstracts agent behavior into reusable components. We evaluate robustness using a red-teaming framework with an adaptive attacker LLM and a deterministic judge that produces binary outcomes with supporting rationales ac",
+    "published": "Wed, 17 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "598fe41e1229cae3",
+    "crawled_at": "2026-06-18T06:00:53.597346"
+  },
+  {
+    "title": "Timestamp-Aware Spatio-Temporal Graph Contrastive Learning for Network Intrusion Detection",
+    "link": "https://arxiv.org/abs/2606.17109",
+    "summary": "arXiv:2606.17109v1 Announce Type: new Abstract: Given their effectiveness in modeling the relational structure among network traffic flows, graph neural networks (GNNs) have been widely adopted in network intrusion detection systems (NIDSs). However, most existing GNN-based NIDS approaches focus on the relational structure of traffic flows, and treat them as temporally independent, which limits their ability to cope with evolving attack behaviors. Moreover, their reliance on supervised or semi-supervised learning often restricts generalization to unseen attacks. To address these limitations, we propose a novel self-supervised GNN-based framework. To the best of our knowledge, the proposed model is among the first self-supervised GNN-based NIDS models to explicitly leverage real timestamps,",
+    "published": "Wed, 17 Jun 2026 00:00:00 -0400",
+    "source": "arXiv cs.CR (密码学与安全)",
+    "domain": "security",
+    "category": "research",
+    "hash": "b33a4acfa88a161b",
+    "crawled_at": "2026-06-18T06:00:53.597346"
+  },
+  {
+    "title": "A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry",
+    "link": "https://openai.com/index/ai-chemist-improves-reaction",
+    "summary": "OpenAI and Molecule.one show how a near-autonomous AI chemist using GPT-5.4 improved a key drug-making reaction, advancing medicinal chemistry research.",
+    "published": "Wed, 17 Jun 2026 10:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "f7cb2c109ce02a5f",
+    "crawled_at": "2026-06-18T06:04:17.973443"
+  },
+  {
+    "title": "Introducing LifeSciBench",
+    "link": "https://openai.com/index/introducing-life-sci-bench",
+    "summary": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
+    "published": "Wed, 17 Jun 2026 00:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "2da6cb47b0f6c2a8",
+    "crawled_at": "2026-06-18T06:04:17.973443"
+  },
+  {
+    "title": "Predicting model behavior before release by simulating deployment",
+    "link": "https://openai.com/index/deployment-simulation",
+    "summary": "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversation data to improve safety and evaluation accuracy.",
+    "published": "Tue, 16 Jun 2026 00:00:00 GMT",
+    "source": "OpenAI Blog",
+    "domain": "ai",
+    "category": "industry",
+    "hash": "32a36316c81176e2",
+    "crawled_at": "2026-06-18T06:04:17.973443"
+  }
+]

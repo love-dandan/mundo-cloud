@@ -682,5 +682,41 @@
   "181dad225f917b34": {
     "title": "LiteLLM Vulnerability Chain Lets Low-Privilege Users Take Over AI Gateway Servers",
     "crawled_at": "2026-06-16T06:03:31.967177"
+  },
+  "d8278daa9076ba9e": {
+    "title": "Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search",
+    "crawled_at": "2026-06-18T06:00:36.578554"
+  },
+  "3ee77efc729c83b9": {
+    "title": "When Rules Learn: A Self-Evolving Agent for Legal Case Retrieval",
+    "crawled_at": "2026-06-18T06:00:36.578554"
+  },
+  "adc5bb2678d27528": {
+    "title": "SkillChain-Gym: A Benchmark for Reskilling-Aware Production-Inventory Control under Disruptions",
+    "crawled_at": "2026-06-18T06:00:36.578554"
+  },
+  "e7d6f1b57fa12e3a": {
+    "title": "Security and Human-Centered Assessment of BACnet-Controlled DALI Infrastructure in an Educational Building Automation Testbed",
+    "crawled_at": "2026-06-18T06:00:53.597346"
+  },
+  "598fe41e1229cae3": {
+    "title": "Securing Multi-Agent GIS Systems: Risk Evaluation and Prompt Hardening Optimization",
+    "crawled_at": "2026-06-18T06:00:53.597346"
+  },
+  "b33a4acfa88a161b": {
+    "title": "Timestamp-Aware Spatio-Temporal Graph Contrastive Learning for Network Intrusion Detection",
+    "crawled_at": "2026-06-18T06:00:53.597346"
+  },
+  "f7cb2c109ce02a5f": {
+    "title": "A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry",
+    "crawled_at": "2026-06-18T06:04:17.973443"
+  },
+  "2da6cb47b0f6c2a8": {
+    "title": "Introducing LifeSciBench",
+    "crawled_at": "2026-06-18T06:04:17.973443"
+  },
+  "32a36316c81176e2": {
+    "title": "Predicting model behavior before release by simulating deployment",
+    "crawled_at": "2026-06-18T06:04:17.973443"
   }
 }
