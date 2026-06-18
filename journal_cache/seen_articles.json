@@ -718,5 +718,57 @@
   "32a36316c81176e2": {
     "title": "Predicting model behavior before release by simulating deployment",
     "crawled_at": "2026-06-18T06:04:17.973443"
+  },
+  "b27acf0bcbd58d72": {
+    "title": "Skill-Constrained Model Predictive Control for Resilient Manufacturing Supply Chains",
+    "crawled_at": "2026-06-19T06:00:24.448356"
+  },
+  "47bbd6876fa5b0d4": {
+    "title": "Nothing from Something: Can a Language Model Discover 0?",
+    "crawled_at": "2026-06-19T06:00:24.448356"
+  },
+  "22cd1d7a7e50cb64": {
+    "title": "Quantifying Consistency in LLM Logical Reasoning via Structural Uncertainty",
+    "crawled_at": "2026-06-19T06:00:24.448356"
+  },
+  "7f939bd8c3d1a643": {
+    "title": "Conflict-Aware Retriever Editing for Knowledge Injection Attacks on LLM-Based RAG Systems",
+    "crawled_at": "2026-06-19T06:01:22.761010"
+  },
+  "c03ed937d94b52ed": {
+    "title": "TIGER: Inverting Transformer Gradients via Embedding-Subspace Distance Optimization",
+    "crawled_at": "2026-06-19T06:01:22.761010"
+  },
+  "6c67eb440248639a": {
+    "title": "TopVenues: A Reproducible Corpus and Tooling Substrate for Cybersecurity Literature Reviews",
+    "crawled_at": "2026-06-19T06:01:22.761010"
+  },
+  "6508dff8ca2c65d6": {
+    "title": "Jun 18, 2026Frontier Red TeamProject Fetch: Phase two",
+    "crawled_at": "2026-06-19T06:01:41.324865"
+  },
+  "3b8e56f16a323adf": {
+    "title": "Jun 16, 2026Economic ResearchAgentic coding and persistent returns to expertise",
+    "crawled_at": "2026-06-19T06:01:41.324865"
+  },
+  "b6390178e52d3be3": {
+    "title": "Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits",
+    "crawled_at": "2026-06-19T06:01:41.324865"
+  },
+  "6b49621e3885616c": {
+    "title": "New usage analytics and updated spend controls for enterprises",
+    "crawled_at": "2026-06-19T06:04:11.804577"
+  },
+  "9b9e3376b591bde3": {
+    "title": "Improving health intelligence in ChatGPT",
+    "crawled_at": "2026-06-19T06:04:11.804577"
+  },
+  "b9faeb662f2ebbb9": {
+    "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+    "crawled_at": "2026-06-19T06:04:11.804577"
+  },
+  "16f59dd30befaf46": {
+    "title": "‘Popa’ Botnet Linked to Publicly-Traded Israeli Firm",
+    "crawled_at": "2026-06-19T06:06:28.055017"
   }
 }
